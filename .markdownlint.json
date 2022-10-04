@@ -1,0 +1,13 @@
+{
+	"blank_lines": true,
+	"spelling": false,
+	"code-block-style": {
+		"style": "fenced"
+	},
+	"code-fence-style": {
+		"style": "backtick"
+	},
+
+	"no-trailing-punctuation": true,
+	"no-trailing-spaces": true
+}

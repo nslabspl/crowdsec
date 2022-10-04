@@ -1,0 +1,18 @@
+{
+	"[go]": {
+		"editor.insertSpaces": false
+	},
+
+	// Editor
+	"editor.acceptSuggestionOnEnter": "on",
+	"editor.autoClosingBrackets": "always",
+	"editor.autoClosingDelete": "always",
+	"editor.autoClosingQuotes": "always",
+	"editor.find.autoFindInSelection": "always",
+
+	// Workbench
+	"workbench.tree.expandMode": "singleClick",
+	"workbench.tree.indent": 8,
+	"workbench.tree.renderIndentGuides": "onHover",
+	"workbench.colorTheme": "Abyss",
+}
