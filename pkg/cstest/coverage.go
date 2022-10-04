@@ -9,7 +9,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
 	log "github.com/sirupsen/logrus"
 )
 

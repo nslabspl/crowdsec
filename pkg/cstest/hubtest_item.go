@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
-	"github.com/crowdsecurity/crowdsec/pkg/parser"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/parser"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v2"
 )
@@ -156,7 +156,7 @@ func (t *HubTestItem) InstallHub() error {
 			}
 			parserFileName := filepath.Base(parserSource)
 
-			// runtime/hub/parsers/s00-raw/crowdsecurity/
+			// runtime/hub/parsers/s00-raw/wojtekxtx/
 			hubDirParserDest := filepath.Join(t.RuntimeHubPath, filepath.Dir(hubParser.RemotePath))
 
 			// runtime/parsers/s00-raw/
@@ -169,7 +169,7 @@ func (t *HubTestItem) InstallHub() error {
 				return fmt.Errorf("unable to create folder '%s': %s", parserDirDest, err)
 			}
 
-			// runtime/hub/parsers/s00-raw/crowdsecurity/syslog-logs.yaml
+			// runtime/hub/parsers/s00-raw/wojtekxtx/syslog-logs.yaml
 			hubDirParserPath := filepath.Join(hubDirParserDest, parserFileName)
 			if err := Copy(parserSource, hubDirParserPath); err != nil {
 				return fmt.Errorf("unable to copy '%s' to '%s': %s", parserSource, hubDirParserPath, err)
@@ -240,7 +240,7 @@ func (t *HubTestItem) InstallHub() error {
 			}
 			scenarioFileName := filepath.Base(scenarioSource)
 
-			// runtime/hub/scenarios/crowdsecurity/
+			// runtime/hub/scenarios/wojtekxtx/
 			hubDirScenarioDest := filepath.Join(t.RuntimeHubPath, filepath.Dir(hubScenario.RemotePath))
 
 			// runtime/parsers/scenarios/
@@ -253,7 +253,7 @@ func (t *HubTestItem) InstallHub() error {
 				return fmt.Errorf("unable to create folder '%s': %s", scenarioDirDest, err)
 			}
 
-			// runtime/hub/scenarios/crowdsecurity/ssh-bf.yaml
+			// runtime/hub/scenarios/wojtekxtx/ssh-bf.yaml
 			hubDirScenarioPath := filepath.Join(hubDirScenarioDest, scenarioFileName)
 			if err := Copy(scenarioSource, hubDirScenarioPath); err != nil {
 				return fmt.Errorf("unable to copy '%s' to '%s': %s", scenarioSource, hubDirScenarioPath, err)
@@ -309,7 +309,7 @@ func (t *HubTestItem) InstallHub() error {
 			}
 			postoverflowFileName := filepath.Base(postoverflowSource)
 
-			// runtime/hub/postoverflows/s00-enrich/crowdsecurity/
+			// runtime/hub/postoverflows/s00-enrich/wojtekxtx/
 			hubDirPostoverflowDest := filepath.Join(t.RuntimeHubPath, filepath.Dir(hubPostOverflow.RemotePath))
 
 			// runtime/postoverflows/s00-enrich
@@ -322,7 +322,7 @@ func (t *HubTestItem) InstallHub() error {
 				return fmt.Errorf("unable to create folder '%s': %s", postoverflowDirDest, err)
 			}
 
-			// runtime/hub/postoverflows/s00-enrich/crowdsecurity/rdns.yaml
+			// runtime/hub/postoverflows/s00-enrich/wojtekxtx/rdns.yaml
 			hubDirPostoverflowPath := filepath.Join(hubDirPostoverflowDest, postoverflowFileName)
 			if err := Copy(postoverflowSource, hubDirPostoverflowPath); err != nil {
 				return fmt.Errorf("unable to copy '%s' to '%s': %s", postoverflowSource, hubDirPostoverflowPath, err)

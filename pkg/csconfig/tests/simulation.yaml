@@ -1,4 +1,4 @@
 simulation: off
 # exclusions:
-#  - crowdsecurity/ssh-bf
+#  - wojtekxtx/ssh-bf
  
