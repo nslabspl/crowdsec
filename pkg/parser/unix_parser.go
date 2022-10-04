@@ -6,9 +6,9 @@ import (
 	"path"
 	"strings"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
 
-	"github.com/crowdsecurity/grokky"
+	"github.com/wojtekxtx/grokky"
 	log "github.com/sirupsen/logrus"
 )
 

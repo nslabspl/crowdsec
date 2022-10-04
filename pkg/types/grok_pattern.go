@@ -2,7 +2,7 @@ package types
 
 import (
 	"github.com/antonmedv/expr/vm"
-	"github.com/crowdsecurity/grokky"
+	"github.com/wojtekxtx/grokky"
 )
 
 //Used mostly for statics

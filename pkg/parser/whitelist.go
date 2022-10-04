@@ -4,7 +4,7 @@ import (
 	"net"
 
 	"github.com/antonmedv/expr/vm"
-	"github.com/crowdsecurity/crowdsec/pkg/exprhelpers"
+	"github.com/wojtekxtx/crowdsec/pkg/exprhelpers"
 )
 
 type Whitelist struct {
