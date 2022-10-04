@@ -13,8 +13,8 @@ import (
 	log "github.com/sirupsen/logrus"
 
 	"github.com/antonmedv/expr"
-	"github.com/crowdsecurity/crowdsec/pkg/exprhelpers"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/exprhelpers"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

@@ -1,6 +1,6 @@
 package leakybucket
 
-import "github.com/crowdsecurity/crowdsec/pkg/types"
+import "github.com/wojtekxtx/crowdsec/pkg/types"
 
 type Processor interface {
 	OnBucketInit(Bucket *BucketFactory) error

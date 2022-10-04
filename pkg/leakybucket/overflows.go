@@ -6,15 +6,15 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/crowdsecurity/crowdsec/pkg/models"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/davecgh/go-spew/spew"
 	"github.com/go-openapi/strfmt"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
 	"github.com/antonmedv/expr"
-	"github.com/crowdsecurity/crowdsec/pkg/exprhelpers"
+	"github.com/wojtekxtx/crowdsec/pkg/exprhelpers"
 )
 
 //SourceFromEvent extracts and formats a valid models.Source object from an Event
