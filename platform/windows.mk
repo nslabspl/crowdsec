@@ -14,7 +14,7 @@ MINIMUM_SUPPORTED_GO_MAJOR_VERSION = 1
 MINIMUM_SUPPORTED_GO_MINOR_VERSION = 17
 GO_VERSION_VALIDATION_ERR_MSG = Golang version ($(BUILD_GOVERSION)) is not supported, please use least $(MINIMUM_SUPPORTED_GO_MAJOR_VERSION).$(MINIMUM_SUPPORTED_GO_MINOR_VERSION)
 #Current versioning information from env
-#BUILD_VERSION?=$(shell (Invoke-WebRequest -UseBasicParsing -Uri https://api.github.com/repos/crowdsecurity/crowdsec/releases/latest).Content | jq -r '.tag_name')
+#BUILD_VERSION?=$(shell (Invoke-WebRequest -UseBasicParsing -Uri https://api.github.com/repos/wojtekxtx/crowdsec/releases/latest).Content | jq -r '.tag_name')
 #hardcode it till i find a workaround
 BUILD_VERSION?=$(shell git describe --tags $$(git rev-list --tags --max-count=1))
 BUILD_GOVERSION?=$(shell (go env GOVERSION).replace("go",""))
