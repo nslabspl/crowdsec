@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwversion"
+	"github.com/wojtekxtx/crowdsec/pkg/cwversion"
 	log "github.com/sirupsen/logrus"
 )
 

@@ -9,9 +9,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/csplugin"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/csplugin"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 	"github.com/gin-gonic/gin"
 
 	log "github.com/sirupsen/logrus"
@@ -118,14 +118,14 @@ func TestSimulatedAlert(t *testing.T) {
 
 	w := lapi.RecordResponse("GET", "/v1/alerts?simulated=false", alertContent, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), `"message":"Ip 91.121.79.178 performed crowdsecurity/ssh-bf (6 events over `)
-	assert.NotContains(t, w.Body.String(), `"message":"Ip 91.121.79.179 performed crowdsecurity/ssh-bf (6 events over `)
+	assert.Contains(t, w.Body.String(), `"message":"Ip 91.121.79.178 performed wojtekxtx/ssh-bf (6 events over `)
+	assert.NotContains(t, w.Body.String(), `"message":"Ip 91.121.79.179 performed wojtekxtx/ssh-bf (6 events over `)
 	//include decision in simulation mode
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?simulated=true", alertContent, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), `"message":"Ip 91.121.79.178 performed crowdsecurity/ssh-bf (6 events over `)
-	assert.Contains(t, w.Body.String(), `"message":"Ip 91.121.79.179 performed crowdsecurity/ssh-bf (6 events over `)
+	assert.Contains(t, w.Body.String(), `"message":"Ip 91.121.79.178 performed wojtekxtx/ssh-bf (6 events over `)
+	assert.Contains(t, w.Body.String(), `"message":"Ip 91.121.79.179 performed wojtekxtx/ssh-bf (6 events over `)
 }
 
 func TestCreateAlert(t *testing.T) {
@@ -195,14 +195,14 @@ func TestAlertListFilters(t *testing.T) {
 	w = lapi.RecordResponse("GET", "/v1/alerts", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
 	//check alert and decision
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test decision_type filter (ok)
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?decision_type=ban", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test decision_type filter (bad value)
@@ -215,7 +215,7 @@ func TestAlertListFilters(t *testing.T) {
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?scope=Ip", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test scope (bad value)
@@ -226,14 +226,14 @@ func TestAlertListFilters(t *testing.T) {
 
 	//test scenario (ok)
 
-	w = lapi.RecordResponse("GET", "/v1/alerts?scenario=crowdsecurity/ssh-bf", emptyBody, "password")
+	w = lapi.RecordResponse("GET", "/v1/alerts?scenario=wojtekxtx/ssh-bf", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test scenario (bad value)
 
-	w = lapi.RecordResponse("GET", "/v1/alerts?scenario=crowdsecurity/nope", emptyBody, "password")
+	w = lapi.RecordResponse("GET", "/v1/alerts?scenario=wojtekxtx/nope", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
 	assert.Equal(t, "null", w.Body.String())
 
@@ -241,7 +241,7 @@ func TestAlertListFilters(t *testing.T) {
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?ip=91.121.79.195", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test ip (bad value)
@@ -260,7 +260,7 @@ func TestAlertListFilters(t *testing.T) {
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?range=91.121.79.0/24&contains=false", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test range
@@ -279,7 +279,7 @@ func TestAlertListFilters(t *testing.T) {
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?since=1h", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test since (ok but yields no results)
@@ -298,7 +298,7 @@ func TestAlertListFilters(t *testing.T) {
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?until=1ns", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test until (ok but no return)
@@ -317,21 +317,21 @@ func TestAlertListFilters(t *testing.T) {
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?simulated=true", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test simulated (ok)
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?simulated=false", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test has active decision
 
 	w = lapi.RecordResponse("GET", "/v1/alerts?has_active_decision=true", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'crowdsecurity/ssh-bf' (6 events over ")
+	assert.Contains(t, w.Body.String(), "Ip 91.121.79.195 performed 'wojtekxtx/ssh-bf' (6 events over ")
 	assert.Contains(t, w.Body.String(), `scope":"Ip","simulated":false,"type":"ban","value":"91.121.79.195"`)
 
 	//test has active decision
@@ -371,7 +371,7 @@ func TestListAlert(t *testing.T) {
 
 	w = lapi.RecordResponse("GET", "/v1/alerts", emptyBody, "password")
 	assert.Equal(t, 200, w.Code)
-	assert.Contains(t, w.Body.String(), "crowdsecurity/test")
+	assert.Contains(t, w.Body.String(), "wojtekxtx/test")
 }
 
 func TestCreateAlertErrors(t *testing.T) {

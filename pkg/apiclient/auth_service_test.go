@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwversion"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/cwversion"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 )
@@ -28,7 +28,7 @@ func TestWatcherAuth(t *testing.T) {
 		_, _ = buf.ReadFrom(r.Body)
 		newStr := buf.String()
 		log.Printf("--> %s", newStr)
-		if newStr == `{"machine_id":"test_login","password":"test_password","scenarios":["crowdsecurity/test"]}
+		if newStr == `{"machine_id":"test_login","password":"test_password","scenarios":["wojtekxtx/test"]}
 ` {
 			log.Printf("ok cool")
 			w.WriteHeader(http.StatusOK)
@@ -52,7 +52,7 @@ func TestWatcherAuth(t *testing.T) {
 		UserAgent:     fmt.Sprintf("crowdsec/%s", cwversion.VersionStr()),
 		URL:           apiURL,
 		VersionPrefix: "v1",
-		Scenarios:     []string{"crowdsecurity/test"},
+		Scenarios:     []string{"wojtekxtx/test"},
 	}
 	client, err := NewClient(mycfg)
 
@@ -76,7 +76,7 @@ func TestWatcherAuth(t *testing.T) {
 		UserAgent:     fmt.Sprintf("crowdsec/%s", cwversion.VersionStr()),
 		URL:           apiURL,
 		VersionPrefix: "v1",
-		Scenarios:     []string{"crowdsecurity/test"},
+		Scenarios:     []string{"wojtekxtx/test"},
 	}
 	client, err = NewClient(mycfg)
 
@@ -145,7 +145,7 @@ func TestWatcherUnregister(t *testing.T) {
 		buf := new(bytes.Buffer)
 		_, _ = buf.ReadFrom(r.Body)
 		newStr := buf.String()
-		if newStr == `{"machine_id":"test_login","password":"test_password","scenarios":["crowdsecurity/test"]}
+		if newStr == `{"machine_id":"test_login","password":"test_password","scenarios":["wojtekxtx/test"]}
 ` {
 			w.WriteHeader(http.StatusOK)
 			fmt.Fprintf(w, `{"code":200,"expire":"2029-11-30T14:14:24+01:00","token":"toto"}`)
@@ -166,7 +166,7 @@ func TestWatcherUnregister(t *testing.T) {
 		UserAgent:     fmt.Sprintf("crowdsec/%s", cwversion.VersionStr()),
 		URL:           apiURL,
 		VersionPrefix: "v1",
-		Scenarios:     []string{"crowdsecurity/test"},
+		Scenarios:     []string{"wojtekxtx/test"},
 	}
 	client, err := NewClient(mycfg)
 
@@ -220,7 +220,7 @@ func TestWatcherEnroll(t *testing.T) {
 		UserAgent:     fmt.Sprintf("crowdsec/%s", cwversion.VersionStr()),
 		URL:           apiURL,
 		VersionPrefix: "v1",
-		Scenarios:     []string{"crowdsecurity/test"},
+		Scenarios:     []string{"wojtekxtx/test"},
 	}
 	client, err := NewClient(mycfg)
 
