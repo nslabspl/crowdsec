@@ -11,8 +11,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/bouncer"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/predicate"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/bouncer"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/predicate"
 )
 
 // BouncerQuery is the builder for querying Bouncer entities.

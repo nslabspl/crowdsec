@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -409,18 +409,18 @@ func fileToStringX(path string) string {
 
 func resetResponseByPath() {
 	responseByPath = map[string]string{
-		"/master/parsers/s01-parse/crowdsecurity/foobar_parser.yaml":    fileToStringX("./tests/foobar_parser.yaml"),
-		"/master/parsers/s01-parse/crowdsecurity/foobar_subparser.yaml": fileToStringX("./tests/foobar_parser.yaml"),
-		"/master/collections/crowdsecurity/test_collection.yaml":        fileToStringX("./tests/collection_v1.yaml"),
+		"/master/parsers/s01-parse/wojtekxtx/foobar_parser.yaml":    fileToStringX("./tests/foobar_parser.yaml"),
+		"/master/parsers/s01-parse/wojtekxtx/foobar_subparser.yaml": fileToStringX("./tests/foobar_parser.yaml"),
+		"/master/collections/wojtekxtx/test_collection.yaml":        fileToStringX("./tests/collection_v1.yaml"),
 		"/master/.index.json": fileToStringX("./tests/index1.json"),
-		"/master/scenarios/crowdsecurity/foobar_scenario.yaml": `filter: true
-name: crowdsecurity/foobar_scenario`,
-		"/master/scenarios/crowdsecurity/barfoo_scenario.yaml": `filter: true
-name: crowdsecurity/foobar_scenario`,
-		"/master/collections/crowdsecurity/foobar_subcollection.yaml": `
+		"/master/scenarios/wojtekxtx/foobar_scenario.yaml": `filter: true
+name: wojtekxtx/foobar_scenario`,
+		"/master/scenarios/wojtekxtx/barfoo_scenario.yaml": `filter: true
+name: wojtekxtx/foobar_scenario`,
+		"/master/collections/wojtekxtx/foobar_subcollection.yaml": `
 blah: blalala
 qwe: jejwejejw`,
-		"/master/collections/crowdsecurity/foobar.yaml": `
+		"/master/collections/wojtekxtx/foobar.yaml": `
 blah: blalala
 qwe: jejwejejw`,
 	}

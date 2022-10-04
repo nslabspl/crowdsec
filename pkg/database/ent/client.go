@@ -7,14 +7,14 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/migrate"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/migrate"
 
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/alert"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/bouncer"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/decision"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/event"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/machine"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/meta"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/alert"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/bouncer"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/decision"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/event"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/machine"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/meta"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
