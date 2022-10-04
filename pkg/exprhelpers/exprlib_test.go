@@ -8,10 +8,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/database"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/database"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	log "github.com/sirupsen/logrus"
 
 	"testing"
@@ -278,7 +278,7 @@ func TestFile(t *testing.T) {
 		},
 		{
 			name:   "File() test: word in file but different case",
-			filter: "'CrowdSecurity' in File('test_data.txt')",
+			filter: "'wojtekxtx' in File('test_data.txt')",
 			result: false,
 			err:    nil,
 		},

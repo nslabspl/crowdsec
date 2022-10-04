@@ -7,8 +7,8 @@ import (
 	"time"
 
 	//"log"
-	"github.com/crowdsecurity/crowdsec/pkg/time/rate"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/time/rate"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"gopkg.in/tomb.v2"
 
 	//rate "time/rate"

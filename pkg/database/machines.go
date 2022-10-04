@@ -6,8 +6,8 @@ import (
 
 	"github.com/go-openapi/strfmt"
 
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/machine"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/machine"
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/bcrypt"
 )
