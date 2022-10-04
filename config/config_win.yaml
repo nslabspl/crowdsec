@@ -1,7 +1,7 @@
 common:
   daemonize: false
   log_media: file
-  log_level: info
+  log_level: warn
   log_dir:  C:\ProgramData\CrowdSec\log\
   working_dir: .
 config_paths:
@@ -18,7 +18,7 @@ crowdsec_service:
 cscli:
   output: human
 db_config:
-  log_level: info
+  log_level: warn
   type: sqlite
   db_path:  C:\ProgramData\CrowdSec\data\crowdsec.db
   #user: 
@@ -34,7 +34,7 @@ api:
     insecure_skip_verify: false
     credentials_path:  C:\ProgramData\CrowdSec\config\local_api_credentials.yaml
   server:
-    log_level: info
+    log_level: warn
     listen_uri: 127.0.0.1:8080
     profiles_path: C:\ProgramData\Crowdsec\config\profiles.yaml
     online_client: # Crowdsec API credentials (to push signals and receive bad IPs)
