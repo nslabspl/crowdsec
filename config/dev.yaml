@@ -9,9 +9,6 @@ config_paths:
   data_dir: ./data/   
   notification_dir: ./config/notifications/
   plugin_dir: ./plugins/
-  #simulation_path: /etc/crowdsec/config/simulation.yaml
-  #hub_dir: /etc/crowdsec/hub/
-  #index_path: ./config/hub/.index.json
 crowdsec_service:
   acquisition_path: ./config/acquis.yaml
   parser_routines: 1
@@ -29,8 +26,8 @@ db_config:
   host: "172.17.0.2"
   port: 3306
   flush:
-    #max_items: 10000
-    #max_age: 168h
+    max_items: 10000
+    max_age: 172h
 api:
   client:
     credentials_path: ./config/local_api_credentials.yaml
@@ -38,7 +35,7 @@ api:
     #insecure_skip_verify: true
     listen_uri: 127.0.0.1:8081
     profiles_path: ./config/profiles.yaml
-    tls:
+    #tls:
       #cert_file: ./cert.pem
       #key_file: ./key.pem
     online_client: # Central API
