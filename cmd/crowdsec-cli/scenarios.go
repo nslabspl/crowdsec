@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
@@ -16,10 +16,10 @@ func NewScenariosCmd() *cobra.Command {
 		Use:   "scenarios [action] [config]",
 		Short: "Install/Remove/Upgrade/Inspect scenario(s) from hub",
 		Example: `cscli scenarios list [-a]
-cscli scenarios install crowdsecurity/ssh-bf
-cscli scenarios inspect crowdsecurity/ssh-bf
-cscli scenarios upgrade crowdsecurity/ssh-bf
-cscli scenarios remove crowdsecurity/ssh-bf
+cscli scenarios install wojtekxtx/ssh-bf
+cscli scenarios inspect wojtekxtx/ssh-bf
+cscli scenarios upgrade wojtekxtx/ssh-bf
+cscli scenarios remove wojtekxtx/ssh-bf
 `,
 		Args:              cobra.MinimumNArgs(1),
 		Aliases:           []string{"scenario"},
@@ -163,7 +163,7 @@ cscli scenarios remove crowdsecurity/ssh-bf
 		Short: "List all scenario(s) or given one",
 		Long:  `List all scenario(s) or given one`,
 		Example: `cscli scenarios list
-cscli scenarios list crowdsecurity/xxx`,
+cscli scenarios list wojtekxtx/xxx`,
 		DisableAutoGenTag: true,
 		Run: func(cmd *cobra.Command, args []string) {
 			items := ListItems([]string{cwhub.SCENARIOS}, args, false, true, all)

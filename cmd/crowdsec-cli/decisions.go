@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/apiclient"
-	"github.com/crowdsecurity/crowdsec/pkg/cwversion"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/apiclient"
+	"github.com/wojtekxtx/crowdsec/pkg/cwversion"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/go-openapi/strfmt"
 	"github.com/jszwec/csvutil"
 	"github.com/olekukonko/tablewriter"
@@ -192,7 +192,7 @@ func NewDecisionsCmd() *cobra.Command {
 		Short: "List decisions from LAPI",
 		Example: `cscli decisions list -i 1.2.3.4
 cscli decisions list -r 1.2.3.0/24
-cscli decisions list -s crowdsecurity/ssh-bf
+cscli decisions list -s wojtekxtx/ssh-bf
 cscli decisions list -t ban
 `,
 		Args:              cobra.ExactArgs(0),
@@ -286,7 +286,7 @@ cscli decisions list -t ban
 	cmdDecisionsList.Flags().StringVar(filter.ScopeEquals, "scope", "", "restrict to this scope (ie. ip,range,session)")
 	cmdDecisionsList.Flags().StringVar(filter.OriginEquals, "origin", "", "restrict to this origin (ie. lists,CAPI,cscli,cscli-import,crowdsec)")
 	cmdDecisionsList.Flags().StringVarP(filter.ValueEquals, "value", "v", "", "restrict to this value (ie. 1.2.3.4,userName)")
-	cmdDecisionsList.Flags().StringVarP(filter.ScenarioEquals, "scenario", "s", "", "restrict to this scenario (ie. crowdsecurity/ssh-bf)")
+	cmdDecisionsList.Flags().StringVarP(filter.ScenarioEquals, "scenario", "s", "", "restrict to this scenario (ie. wojtekxtx/ssh-bf)")
 	cmdDecisionsList.Flags().StringVarP(filter.IPEquals, "ip", "i", "", "restrict to alerts from this source ip (shorthand for --scope ip --value <IP>)")
 	cmdDecisionsList.Flags().StringVarP(filter.RangeEquals, "range", "r", "", "restrict to alerts from this source range (shorthand for --scope range --value <RANGE>)")
 	cmdDecisionsList.Flags().IntVarP(filter.Limit, "limit", "l", 100, "number of alerts to get (use 0 to remove the limit)")

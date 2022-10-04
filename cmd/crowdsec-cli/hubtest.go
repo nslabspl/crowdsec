@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/crowdsecurity/crowdsec/pkg/cstest"
+	"github.com/wojtekxtx/crowdsec/pkg/cstest"
 	"github.com/enescakir/emoji"
 	"github.com/olekukonko/tablewriter"
 	log "github.com/sirupsen/logrus"
@@ -57,7 +57,7 @@ func NewHubTestCmd() *cobra.Command {
 		Short: "create [test_name]",
 		Example: `cscli hubtest create my-awesome-test --type syslog
 cscli hubtest create my-nginx-custom-test --type nginx
-cscli hubtest create my-scenario-test --parsers crowdsecurity/nginx --scenarios crowdsecurity/http-probing`,
+cscli hubtest create my-scenario-test --parsers wojtekxtx/nginx --scenarios wojtekxtx/http-probing`,
 		Args:              cobra.ExactArgs(1),
 		DisableAutoGenTag: true,
 		Run: func(cmd *cobra.Command, args []string) {
@@ -100,8 +100,8 @@ cscli hubtest create my-scenario-test --parsers crowdsecurity/nginx --scenarios 
 			}
 			scenarioAssertFile.Close()
 
-			parsers = append(parsers, "crowdsecurity/syslog-logs")
-			parsers = append(parsers, "crowdsecurity/dateparse-enrich")
+			parsers = append(parsers, "wojtekxtx/syslog-logs")
+			parsers = append(parsers, "wojtekxtx/dateparse-enrich")
 
 			if len(scenarios) == 0 {
 				scenarios = append(scenarios, "")

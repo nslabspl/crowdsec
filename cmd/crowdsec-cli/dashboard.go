@@ -13,7 +13,7 @@ import (
 	"unicode"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/crowdsecurity/crowdsec/pkg/metabase"
+	"github.com/wojtekxtx/crowdsec/pkg/metabase"
 
 	"github.com/pbnjay/memory"
 	log "github.com/sirupsen/logrus"

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
 
 	log "github.com/sirupsen/logrus"
 
@@ -14,11 +14,11 @@ func NewParsersCmd() *cobra.Command {
 	var cmdParsers = &cobra.Command{
 		Use:   "parsers [action] [config]",
 		Short: "Install/Remove/Upgrade/Inspect parser(s) from hub",
-		Example: `cscli parsers install crowdsecurity/sshd-logs
-cscli parsers inspect crowdsecurity/sshd-logs
-cscli parsers upgrade crowdsecurity/sshd-logs
+		Example: `cscli parsers install wojtekxtx/sshd-logs
+cscli parsers inspect wojtekxtx/sshd-logs
+cscli parsers upgrade wojtekxtx/sshd-logs
 cscli parsers list
-cscli parsers remove crowdsecurity/sshd-logs
+cscli parsers remove wojtekxtx/sshd-logs
 `,
 		Args:              cobra.MinimumNArgs(1),
 		Aliases:           []string{"parser"},
@@ -161,7 +161,7 @@ cscli parsers remove crowdsecurity/sshd-logs
 		Short: "List all parsers or given one",
 		Long:  `List all parsers or given one`,
 		Example: `cscli parsers list
-cscli parser list crowdsecurity/xxx`,
+cscli parser list wojtekxtx/xxx`,
 		DisableAutoGenTag: true,
 		Run: func(cmd *cobra.Command, args []string) {
 			items := ListItems([]string{cwhub.PARSERS}, args, false, true, all)

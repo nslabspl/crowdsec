@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
@@ -102,8 +102,8 @@ func NewSimulationCmds() *cobra.Command {
 		Use:   "simulation [command]",
 		Short: "Manage simulation status of scenarios",
 		Example: `cscli simulation status
-cscli simulation enable crowdsecurity/ssh-bf
-cscli simulation disable crowdsecurity/ssh-bf`,
+cscli simulation enable wojtekxtx/ssh-bf
+cscli simulation disable wojtekxtx/ssh-bf`,
 		DisableAutoGenTag: true,
 		PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
 			if err := csConfig.LoadSimulation(); err != nil {

@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/enescakir/emoji"
 	"github.com/olekukonko/tablewriter"
 	dto "github.com/prometheus/client_model/go"

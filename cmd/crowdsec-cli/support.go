@@ -14,11 +14,11 @@ import (
 	"strings"
 
 	"github.com/blackfireio/osinfo"
-	"github.com/crowdsecurity/crowdsec/pkg/apiclient"
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
-	"github.com/crowdsecurity/crowdsec/pkg/cwversion"
-	"github.com/crowdsecurity/crowdsec/pkg/database"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/apiclient"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/cwversion"
+	"github.com/wojtekxtx/crowdsec/pkg/database"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 	"github.com/go-openapi/strfmt"
 	log "github.com/sirupsen/logrus"
 

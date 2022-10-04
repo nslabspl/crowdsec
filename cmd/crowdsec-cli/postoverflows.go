@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
 
 	log "github.com/sirupsen/logrus"
 
@@ -14,11 +14,11 @@ func NewPostOverflowsCmd() *cobra.Command {
 	var cmdPostOverflows = &cobra.Command{
 		Use:   "postoverflows [action] [config]",
 		Short: "Install/Remove/Upgrade/Inspect postoverflow(s) from hub",
-		Example: `cscli postoverflows install crowdsecurity/cdn-whitelist
-		cscli postoverflows inspect crowdsecurity/cdn-whitelist
-		cscli postoverflows upgrade crowdsecurity/cdn-whitelist
+		Example: `cscli postoverflows install wojtekxtx/cdn-whitelist
+		cscli postoverflows inspect wojtekxtx/cdn-whitelist
+		cscli postoverflows upgrade wojtekxtx/cdn-whitelist
 		cscli postoverflows list
-		cscli postoverflows remove crowdsecurity/cdn-whitelist`,
+		cscli postoverflows remove wojtekxtx/cdn-whitelist`,
 		Args:              cobra.MinimumNArgs(1),
 		Aliases:           []string{"postoverflow"},
 		DisableAutoGenTag: true,
@@ -159,7 +159,7 @@ func NewPostOverflowsCmd() *cobra.Command {
 		Short: "List all postoverflows or given one",
 		Long:  `List all postoverflows or given one`,
 		Example: `cscli postoverflows list
-cscli postoverflows list crowdsecurity/xxx`,
+cscli postoverflows list wojtekxtx/xxx`,
 		DisableAutoGenTag: true,
 		Run: func(cmd *cobra.Command, args []string) {
 			items := ListItems([]string{cwhub.PARSERS_OVFLW}, args, false, true, all)

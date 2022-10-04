@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/apiclient"
-	"github.com/crowdsecurity/crowdsec/pkg/cwversion"
-	"github.com/crowdsecurity/crowdsec/pkg/database"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/apiclient"
+	"github.com/wojtekxtx/crowdsec/pkg/cwversion"
+	"github.com/wojtekxtx/crowdsec/pkg/database"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 	"github.com/go-openapi/strfmt"
 	"github.com/olekukonko/tablewriter"
 	"github.com/pkg/errors"
@@ -241,7 +241,7 @@ func NewAlertsCmd() *cobra.Command {
 		Example: `cscli alerts list
 cscli alerts list --ip 1.2.3.4
 cscli alerts list --range 1.2.3.0/24
-cscli alerts list -s crowdsecurity/ssh-bf
+cscli alerts list -s wojtekxtx/ssh-bf
 cscli alerts list --type ban`,
 		DisableAutoGenTag: true,
 		Run: func(cmd *cobra.Command, args []string) {
@@ -326,7 +326,7 @@ cscli alerts list --type ban`,
 	cmdAlertsList.Flags().StringVar(alertListFilter.Until, "until", "", "restrict to alerts older than until (ie. 4h, 30d)")
 	cmdAlertsList.Flags().StringVar(alertListFilter.Since, "since", "", "restrict to alerts newer than since (ie. 4h, 30d)")
 	cmdAlertsList.Flags().StringVarP(alertListFilter.IPEquals, "ip", "i", "", "restrict to alerts from this source ip (shorthand for --scope ip --value <IP>)")
-	cmdAlertsList.Flags().StringVarP(alertListFilter.ScenarioEquals, "scenario", "s", "", "the scenario (ie. crowdsecurity/ssh-bf)")
+	cmdAlertsList.Flags().StringVarP(alertListFilter.ScenarioEquals, "scenario", "s", "", "the scenario (ie. wojtekxtx/ssh-bf)")
 	cmdAlertsList.Flags().StringVarP(alertListFilter.RangeEquals, "range", "r", "", "restrict to alerts from this range (shorthand for --scope range --value <RANGE/X>)")
 	cmdAlertsList.Flags().StringVar(alertListFilter.TypeEquals, "type", "", "restrict to alerts with given decision type (ie. ban, captcha)")
 	cmdAlertsList.Flags().StringVar(alertListFilter.ScopeEquals, "scope", "", "restrict to alerts of this scope (ie. ip,range)")
@@ -351,7 +351,7 @@ cscli alerts list --type ban`,
 /!\ This command can be use only on the same machine than the local API.`,
 		Example: `cscli alerts delete --ip 1.2.3.4
 cscli alerts delete --range 1.2.3.0/24
-cscli alerts delete -s crowdsecurity/ssh-bf"`,
+cscli alerts delete -s wojtekxtx/ssh-bf"`,
 		DisableAutoGenTag: true,
 		Aliases:           []string{"remove"},
 		Args:              cobra.ExactArgs(0),
@@ -412,7 +412,7 @@ cscli alerts delete -s crowdsecurity/ssh-bf"`,
 	cmdAlertsDelete.Flags().SortFlags = false
 	cmdAlertsDelete.Flags().StringVar(alertDeleteFilter.ScopeEquals, "scope", "", "the scope (ie. ip,range)")
 	cmdAlertsDelete.Flags().StringVarP(alertDeleteFilter.ValueEquals, "value", "v", "", "the value to match for in the specified scope")
-	cmdAlertsDelete.Flags().StringVarP(alertDeleteFilter.ScenarioEquals, "scenario", "s", "", "the scenario (ie. crowdsecurity/ssh-bf)")
+	cmdAlertsDelete.Flags().StringVarP(alertDeleteFilter.ScenarioEquals, "scenario", "s", "", "the scenario (ie. wojtekxtx/ssh-bf)")
 	cmdAlertsDelete.Flags().StringVarP(alertDeleteFilter.IPEquals, "ip", "i", "", "Source ip (shorthand for --scope ip --value <IP>)")
 	cmdAlertsDelete.Flags().StringVarP(alertDeleteFilter.RangeEquals, "range", "r", "", "Range source ip (shorthand for --scope range --value <RANGE>)")
 	cmdAlertsDelete.Flags().BoolVarP(&AlertDeleteAll, "all", "a", false, "delete all alerts")

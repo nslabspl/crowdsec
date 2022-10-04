@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
 
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
@@ -69,7 +69,7 @@ cscli hub update # Download list of available configurations from the hub
 		Use:   "update",
 		Short: "Fetch available configs from hub",
 		Long: `
-Fetches the [.index.json](https://github.com/crowdsecurity/hub/blob/master/.index.json) file from hub, containing the list of available configs.
+Fetches the [.index.json](https://github.com/wojtekxtx/hub/blob/master/.index.json) file from hub, containing the list of available configs.
 `,
 		Args:              cobra.ExactArgs(0),
 		DisableAutoGenTag: true,
