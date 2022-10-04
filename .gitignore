@@ -34,6 +34,7 @@ plugins/notifications/dummy/notification-dummy
 pkg/csplugin/tests/cs_plugin_test*
 
 #release stuff
+sh
 crowdsec-v*
 pkg/cwhub/hubdir/.index.json
 msi
