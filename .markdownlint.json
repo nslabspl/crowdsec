@@ -9,5 +9,8 @@
 	},
 
 	"no-trailing-punctuation": true,
-	"no-trailing-spaces": true
+	"no-trailing-spaces": true,
+	"no-space-in-code": true,
+	"no-space-in-emphasis": true,
+	"no-space-in-links": true
 }

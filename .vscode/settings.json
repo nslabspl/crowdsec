@@ -15,4 +15,7 @@
 	"workbench.tree.indent": 8,
 	"workbench.tree.renderIndentGuides": "onHover",
 	"workbench.colorTheme": "Abyss",
+
+	// MarkDown
+	"markdownlint.ignore": ".markdownlintignore"
 }
