@@ -84,7 +84,7 @@ func TestLogin(t *testing.T) {
 
 	// Login with valid machine + scenarios
 	w = httptest.NewRecorder()
-	req, _ = http.NewRequest(http.MethodPost, "/v1/watchers/login", strings.NewReader("{\"machine_id\": \"test\", \"password\": \"test\", \"scenarios\": [\"crowdsecurity/test\", \"crowdsecurity/test2\"]}"))
+	req, _ = http.NewRequest(http.MethodPost, "/v1/watchers/login", strings.NewReader("{\"machine_id\": \"test\", \"password\": \"test\", \"scenarios\": [\"wojtekxtx/test\", \"wojtekxtx/test2\"]}"))
 	req.Header.Add("User-Agent", UserAgent)
 	router.ServeHTTP(w, req)
 

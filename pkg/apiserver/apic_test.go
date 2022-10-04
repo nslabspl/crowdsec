@@ -12,15 +12,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/apiclient"
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/cstest"
-	"github.com/crowdsecurity/crowdsec/pkg/cwversion"
-	"github.com/crowdsecurity/crowdsec/pkg/database"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/decision"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/machine"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/apiclient"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/cstest"
+	"github.com/wojtekxtx/crowdsec/pkg/cwversion"
+	"github.com/wojtekxtx/crowdsec/pkg/database"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/decision"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/machine"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/jarcoal/httpmock"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
@@ -132,17 +132,17 @@ func TestAPICFetchScenariosListFromDB(t *testing.T) {
 		{
 			name: "Simple one machine with two scenarios",
 			machineIDsWithScenarios: map[string]string{
-				"a": "crowdsecurity/http-bf,crowdsecurity/ssh-bf",
+				"a": "wojtekxtx/http-bf,wojtekxtx/ssh-bf",
 			},
-			expectedScenarios: []string{"crowdsecurity/ssh-bf", "crowdsecurity/http-bf"},
+			expectedScenarios: []string{"wojtekxtx/ssh-bf", "wojtekxtx/http-bf"},
 		},
 		{
 			name: "Multi machine with custom+hub scenarios",
 			machineIDsWithScenarios: map[string]string{
-				"a": "crowdsecurity/http-bf,crowdsecurity/ssh-bf,my_scenario",
-				"b": "crowdsecurity/http-bf,crowdsecurity/ssh-bf,foo_scenario",
+				"a": "wojtekxtx/http-bf,wojtekxtx/ssh-bf,my_scenario",
+				"b": "wojtekxtx/http-bf,wojtekxtx/ssh-bf,foo_scenario",
 			},
-			expectedScenarios: []string{"crowdsecurity/ssh-bf", "crowdsecurity/http-bf", "my_scenario", "foo_scenario"},
+			expectedScenarios: []string{"wojtekxtx/ssh-bf", "wojtekxtx/http-bf", "my_scenario", "foo_scenario"},
 		},
 	}
 
@@ -317,7 +317,7 @@ func TestAPICGetMetrics(t *testing.T) {
 					SetMachineId(machineID).
 					SetPassword(testPassword.String()).
 					SetIpAddress(fmt.Sprintf("1.2.3.%d", i)).
-					SetScenarios("crowdsecurity/test").
+					SetScenarios("wojtekxtx/test").
 					SetLastPush(time.Time{}).
 					SetUpdatedAt(time.Time{}).
 					ExecX(context.Background())
@@ -346,22 +346,22 @@ func TestAPICGetMetrics(t *testing.T) {
 func TestCreateAlertsForDecision(t *testing.T) {
 	httpBfDecisionList := &models.Decision{
 		Origin:   &SCOPE_LISTS,
-		Scenario: types.StrPtr("crowdsecurity/http-bf"),
+		Scenario: types.StrPtr("wojtekxtx/http-bf"),
 	}
 
 	sshBfDecisionList := &models.Decision{
 		Origin:   &SCOPE_LISTS,
-		Scenario: types.StrPtr("crowdsecurity/ssh-bf"),
+		Scenario: types.StrPtr("wojtekxtx/ssh-bf"),
 	}
 
 	httpBfDecisionCommunity := &models.Decision{
 		Origin:   &SCOPE_CAPI,
-		Scenario: types.StrPtr("crowdsecurity/http-bf"),
+		Scenario: types.StrPtr("wojtekxtx/http-bf"),
 	}
 
 	sshBfDecisionCommunity := &models.Decision{
 		Origin:   &SCOPE_CAPI,
-		Scenario: types.StrPtr("crowdsecurity/ssh-bf"),
+		Scenario: types.StrPtr("wojtekxtx/ssh-bf"),
 	}
 	type args struct {
 		decisions []*models.Decision
@@ -425,25 +425,25 @@ func TestCreateAlertsForDecision(t *testing.T) {
 func TestFillAlertsWithDecisions(t *testing.T) {
 	httpBfDecisionCommunity := &models.Decision{
 		Origin:   &SCOPE_CAPI,
-		Scenario: types.StrPtr("crowdsecurity/http-bf"),
+		Scenario: types.StrPtr("wojtekxtx/http-bf"),
 		Scope:    types.StrPtr("ip"),
 	}
 
 	sshBfDecisionCommunity := &models.Decision{
 		Origin:   &SCOPE_CAPI,
-		Scenario: types.StrPtr("crowdsecurity/ssh-bf"),
+		Scenario: types.StrPtr("wojtekxtx/ssh-bf"),
 		Scope:    types.StrPtr("ip"),
 	}
 
 	httpBfDecisionList := &models.Decision{
 		Origin:   &SCOPE_LISTS,
-		Scenario: types.StrPtr("crowdsecurity/http-bf"),
+		Scenario: types.StrPtr("wojtekxtx/http-bf"),
 		Scope:    types.StrPtr("ip"),
 	}
 
 	sshBfDecisionList := &models.Decision{
 		Origin:   &SCOPE_LISTS,
-		Scenario: types.StrPtr("crowdsecurity/ssh-bf"),
+		Scenario: types.StrPtr("wojtekxtx/ssh-bf"),
 		Scope:    types.StrPtr("ip"),
 	}
 	type args struct {
@@ -507,7 +507,7 @@ func TestAPICPullTop(t *testing.T) {
 		SetType("ban").
 		SetValue("9.9.9.9").
 		SetScope("Ip").
-		SetScenario("crowdsecurity/ssh-bf").
+		SetScenario("wojtekxtx/ssh-bf").
 		SetUntil(time.Now().Add(time.Hour)).
 		ExecX(context.Background())
 	assertTotalDecisionCount(t, api.dbClient, 1)
@@ -520,7 +520,7 @@ func TestAPICPullTop(t *testing.T) {
 				Deleted: models.GetDecisionsResponse{
 					&models.Decision{
 						Origin:   &SCOPE_LISTS,
-						Scenario: types.StrPtr("crowdsecurity/ssh-bf"),
+						Scenario: types.StrPtr("wojtekxtx/ssh-bf"),
 						Value:    types.StrPtr("9.9.9.9"),
 						Scope:    types.StrPtr("Ip"),
 						Duration: types.StrPtr("24h"),
@@ -528,7 +528,7 @@ func TestAPICPullTop(t *testing.T) {
 					}, // This is already present in DB
 					&models.Decision{
 						Origin:   &SCOPE_LISTS,
-						Scenario: types.StrPtr("crowdsecurity/ssh-bf"),
+						Scenario: types.StrPtr("wojtekxtx/ssh-bf"),
 						Value:    types.StrPtr("9.1.9.9"),
 						Scope:    types.StrPtr("Ip"),
 						Duration: types.StrPtr("24h"),
@@ -538,7 +538,7 @@ func TestAPICPullTop(t *testing.T) {
 				New: models.GetDecisionsResponse{
 					&models.Decision{
 						Origin:   &SCOPE_CAPI,
-						Scenario: types.StrPtr("crowdsecurity/test1"),
+						Scenario: types.StrPtr("wojtekxtx/test1"),
 						Value:    types.StrPtr("1.2.3.4"),
 						Scope:    types.StrPtr("Ip"),
 						Duration: types.StrPtr("24h"),
@@ -546,7 +546,7 @@ func TestAPICPullTop(t *testing.T) {
 					},
 					&models.Decision{
 						Origin:   &SCOPE_CAPI,
-						Scenario: types.StrPtr("crowdsecurity/test2"),
+						Scenario: types.StrPtr("wojtekxtx/test2"),
 						Value:    types.StrPtr("1.2.3.5"),
 						Scope:    types.StrPtr("Ip"),
 						Duration: types.StrPtr("24h"),
@@ -554,7 +554,7 @@ func TestAPICPullTop(t *testing.T) {
 					}, // These two are from community list.
 					&models.Decision{
 						Origin:   &SCOPE_LISTS,
-						Scenario: types.StrPtr("crowdsecurity/http-bf"),
+						Scenario: types.StrPtr("wojtekxtx/http-bf"),
 						Value:    types.StrPtr("1.2.3.6"),
 						Scope:    types.StrPtr("Ip"),
 						Duration: types.StrPtr("24h"),
@@ -562,7 +562,7 @@ func TestAPICPullTop(t *testing.T) {
 					},
 					&models.Decision{
 						Origin:   &SCOPE_LISTS,
-						Scenario: types.StrPtr("crowdsecurity/ssh-bf"),
+						Scenario: types.StrPtr("wojtekxtx/ssh-bf"),
 						Value:    types.StrPtr("1.2.3.7"),
 						Scope:    types.StrPtr("Ip"),
 						Duration: types.StrPtr("24h"),
@@ -603,17 +603,17 @@ func TestAPICPullTop(t *testing.T) {
 	}
 	assert.Equal(t, 3, len(alertScenario))
 	assert.Equal(t, 1, alertScenario[SCOPE_CAPI_ALIAS])
-	assert.Equal(t, 1, alertScenario["lists:crowdsecurity/ssh-bf"])
-	assert.Equal(t, 1, alertScenario["lists:crowdsecurity/http-bf"])
+	assert.Equal(t, 1, alertScenario["lists:wojtekxtx/ssh-bf"])
+	assert.Equal(t, 1, alertScenario["lists:wojtekxtx/http-bf"])
 
 	for _, decisions := range validDecisions {
 		decisionScenarioFreq[decisions.Scenario]++
 	}
 
-	assert.Equal(t, 1, decisionScenarioFreq["crowdsecurity/http-bf"], 1)
-	assert.Equal(t, 1, decisionScenarioFreq["crowdsecurity/ssh-bf"], 1)
-	assert.Equal(t, 1, decisionScenarioFreq["crowdsecurity/test1"], 1)
-	assert.Equal(t, 1, decisionScenarioFreq["crowdsecurity/test2"], 1)
+	assert.Equal(t, 1, decisionScenarioFreq["wojtekxtx/http-bf"], 1)
+	assert.Equal(t, 1, decisionScenarioFreq["wojtekxtx/ssh-bf"], 1)
+	assert.Equal(t, 1, decisionScenarioFreq["wojtekxtx/test1"], 1)
+	assert.Equal(t, 1, decisionScenarioFreq["wojtekxtx/test2"], 1)
 }
 
 func TestAPICPush(t *testing.T) {
@@ -722,7 +722,7 @@ func TestAPICSendMetrics(t *testing.T) {
 					SetMachineId("1234").
 					SetPassword(testPassword.String()).
 					SetIpAddress("1.2.3.4").
-					SetScenarios("crowdsecurity/test").
+					SetScenarios("wojtekxtx/test").
 					SetLastPush(time.Time{}).
 					SetUpdatedAt(time.Time{}).
 					ExecX(context.Background())
@@ -798,7 +798,7 @@ func TestAPICPull(t *testing.T) {
 					SetMachineId("1.2.3.4").
 					SetPassword(testPassword.String()).
 					SetIpAddress("1.2.3.4").
-					SetScenarios("crowdsecurity/ssh-bf").
+					SetScenarios("wojtekxtx/ssh-bf").
 					ExecX(context.Background())
 			},
 			expectedDecisionCount: 1,
@@ -827,7 +827,7 @@ func TestAPICPull(t *testing.T) {
 					New: models.GetDecisionsResponse{
 						&models.Decision{
 							Origin:   &SCOPE_CAPI,
-							Scenario: types.StrPtr("crowdsecurity/test2"),
+							Scenario: types.StrPtr("wojtekxtx/test2"),
 							Value:    types.StrPtr("1.2.3.5"),
 							Scope:    types.StrPtr("Ip"),
 							Duration: types.StrPtr("24h"),

@@ -3,8 +3,8 @@ package v1
 import (
 	"net/http"
 
-	"github.com/crowdsecurity/crowdsec/pkg/models"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/gin-gonic/gin"
 	"github.com/go-openapi/strfmt"
 )

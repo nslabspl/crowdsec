@@ -3,7 +3,7 @@ package v1
 import (
 	"fmt"
 
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent"
 	"github.com/gin-gonic/gin"
 )
 

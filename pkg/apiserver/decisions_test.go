@@ -75,10 +75,10 @@ func TestGetDecisionFilters(t *testing.T) {
 	assert.Nil(t, err)
 	assert.Equal(t, 200, code)
 	assert.Equal(t, 2, len(decisions))
-	assert.Equal(t, "crowdsecurity/ssh-bf", *decisions[0].Scenario)
+	assert.Equal(t, "wojtekxtx/ssh-bf", *decisions[0].Scenario)
 	assert.Equal(t, "91.121.79.179", *decisions[0].Value)
 	assert.Equal(t, int64(1), decisions[0].ID)
-	assert.Equal(t, "crowdsecurity/ssh-bf", *decisions[1].Scenario)
+	assert.Equal(t, "wojtekxtx/ssh-bf", *decisions[1].Scenario)
 	assert.Equal(t, "91.121.79.178", *decisions[1].Value)
 	assert.Equal(t, int64(2), decisions[1].ID)
 
@@ -90,15 +90,15 @@ func TestGetDecisionFilters(t *testing.T) {
 	assert.Nil(t, err)
 	assert.Equal(t, 200, code)
 	assert.Equal(t, 2, len(decisions))
-	assert.Equal(t, "crowdsecurity/ssh-bf", *decisions[0].Scenario)
+	assert.Equal(t, "wojtekxtx/ssh-bf", *decisions[0].Scenario)
 	assert.Equal(t, "91.121.79.179", *decisions[0].Value)
 	assert.Equal(t, int64(1), decisions[0].ID)
-	assert.Equal(t, "crowdsecurity/ssh-bf", *decisions[1].Scenario)
+	assert.Equal(t, "wojtekxtx/ssh-bf", *decisions[1].Scenario)
 	assert.Equal(t, "91.121.79.178", *decisions[1].Value)
 	assert.Equal(t, int64(2), decisions[1].ID)
 
-	// assert.Contains(t, w.Body.String(), `"id":1,"origin":"crowdsec","scenario":"crowdsecurity/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.179"`)
-	// assert.Contains(t, w.Body.String(), `"id":2,"origin":"crowdsec","scenario":"crowdsecurity/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.178"`)
+	// assert.Contains(t, w.Body.String(), `"id":1,"origin":"crowdsec","scenario":"wojtekxtx/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.179"`)
+	// assert.Contains(t, w.Body.String(), `"id":2,"origin":"crowdsec","scenario":"wojtekxtx/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.178"`)
 
 	// Get Decision : scope/value
 
@@ -108,12 +108,12 @@ func TestGetDecisionFilters(t *testing.T) {
 	assert.Nil(t, err)
 	assert.Equal(t, 200, code)
 	assert.Equal(t, 1, len(decisions))
-	assert.Equal(t, "crowdsecurity/ssh-bf", *decisions[0].Scenario)
+	assert.Equal(t, "wojtekxtx/ssh-bf", *decisions[0].Scenario)
 	assert.Equal(t, "91.121.79.179", *decisions[0].Value)
 	assert.Equal(t, int64(1), decisions[0].ID)
 
-	// assert.Contains(t, w.Body.String(), `"id":1,"origin":"crowdsec","scenario":"crowdsecurity/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.179"`)
-	// assert.NotContains(t, w.Body.String(), `"id":2,"origin":"crowdsec","scenario":"crowdsecurity/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.178"`)
+	// assert.Contains(t, w.Body.String(), `"id":1,"origin":"crowdsec","scenario":"wojtekxtx/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.179"`)
+	// assert.NotContains(t, w.Body.String(), `"id":2,"origin":"crowdsec","scenario":"wojtekxtx/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.178"`)
 
 	// Get Decision : ip filter
 
@@ -123,12 +123,12 @@ func TestGetDecisionFilters(t *testing.T) {
 	assert.Nil(t, err)
 	assert.Equal(t, 200, code)
 	assert.Equal(t, 1, len(decisions))
-	assert.Equal(t, "crowdsecurity/ssh-bf", *decisions[0].Scenario)
+	assert.Equal(t, "wojtekxtx/ssh-bf", *decisions[0].Scenario)
 	assert.Equal(t, "91.121.79.179", *decisions[0].Value)
 	assert.Equal(t, int64(1), decisions[0].ID)
 
-	// assert.Contains(t, w.Body.String(), `"id":1,"origin":"crowdsec","scenario":"crowdsecurity/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.179"`)
-	// assert.NotContains(t, w.Body.String(), `"id":2,"origin":"crowdsec","scenario":"crowdsecurity/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.178"`)
+	// assert.Contains(t, w.Body.String(), `"id":1,"origin":"crowdsec","scenario":"wojtekxtx/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.179"`)
+	// assert.NotContains(t, w.Body.String(), `"id":2,"origin":"crowdsec","scenario":"wojtekxtx/ssh-bf","scope":"Ip","type":"ban","value":"91.121.79.178"`)
 
 	// Get decision : by range
 	w = lapi.RecordResponse("GET", "/v1/decisions?range=91.121.79.0/24&contains=false", emptyBody, APIKEY)
@@ -156,15 +156,15 @@ func TestGetDecision(t *testing.T) {
 	assert.Equal(t, 200, code)
 	assert.Equal(t, 3, len(decisions))
 	/*decisions get doesn't perform deduplication*/
-	assert.Equal(t, "crowdsecurity/test", *decisions[0].Scenario)
+	assert.Equal(t, "wojtekxtx/test", *decisions[0].Scenario)
 	assert.Equal(t, "127.0.0.1", *decisions[0].Value)
 	assert.Equal(t, int64(1), decisions[0].ID)
 
-	assert.Equal(t, "crowdsecurity/test", *decisions[1].Scenario)
+	assert.Equal(t, "wojtekxtx/test", *decisions[1].Scenario)
 	assert.Equal(t, "127.0.0.1", *decisions[1].Value)
 	assert.Equal(t, int64(2), decisions[1].ID)
 
-	assert.Equal(t, "crowdsecurity/test", *decisions[2].Scenario)
+	assert.Equal(t, "wojtekxtx/test", *decisions[2].Scenario)
 	assert.Equal(t, "127.0.0.1", *decisions[2].Value)
 	assert.Equal(t, int64(3), decisions[2].ID)
 
