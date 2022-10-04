@@ -12,7 +12,7 @@ import (
 	"net/http/httputil"
 	"net/url"
 
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 	"github.com/go-openapi/strfmt"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
