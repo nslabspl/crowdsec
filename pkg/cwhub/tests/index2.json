@@ -1,7 +1,7 @@
 {
     "collections": {
-        "crowdsecurity/foobar": {
-            "path": "collections/crowdsecurity/foobar.yaml",
+        "wojtekxtx/foobar": {
+            "path": "collections/wojtekxtx/foobar.yaml",
             "version": "0.1",
             "versions": {
                 "0.1": {
@@ -12,20 +12,20 @@
             "long_description": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "content": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "description": "foobar collection : foobar",
-            "author": "crowdsecurity",
+            "author": "wojtekxtx",
             "labels": null,
             "collections": [
-                "crowdsecurity/foobar_subcollection"
+                "wojtekxtx/foobar_subcollection"
             ],
             "parsers": [
-                "crowdsecurity/foobar_parser"
+                "wojtekxtx/foobar_parser"
             ],
             "scenarios": [
-                "crowdsecurity/foobar_scenario"
+                "wojtekxtx/foobar_scenario"
             ]
         },
-        "crowdsecurity/test_collection": {
-            "path": "collections/crowdsecurity/test_collection.yaml",
+        "wojtekxtx/test_collection": {
+            "path": "collections/wojtekxtx/test_collection.yaml",
             "version": "0.2",
             "versions": {
                 "0.1": {
@@ -40,15 +40,15 @@
             "long_description": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "content": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "description": "test_collection : foobar",
-            "author": "crowdsecurity",
+            "author": "wojtekxtx",
             "labels": null,
             "scenarios": [
-                "crowdsecurity/foobar_scenario",
-                "crowdsecurity/barfoo_scenario"
+                "wojtekxtx/foobar_scenario",
+                "wojtekxtx/barfoo_scenario"
             ]
         },
-        "crowdsecurity/foobar_subcollection": {
-            "path": "collections/crowdsecurity/foobar_subcollection.yaml",
+        "wojtekxtx/foobar_subcollection": {
+            "path": "collections/wojtekxtx/foobar_subcollection.yaml",
             "version": "0.1",
             "versions": {
                 "0.1": {
@@ -59,16 +59,16 @@
             "long_description": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "content": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "description": "foobar collection : foobar",
-            "author": "crowdsecurity",
+            "author": "wojtekxtx",
             "labels": null,
             "parsers": [
-                "crowdsecurity/foobar_subparser"
+                "wojtekxtx/foobar_subparser"
             ]
         }
     },
     "parsers": {
-        "crowdsecurity/foobar_parser": {
-            "path": "parsers/s01-parse/crowdsecurity/foobar_parser.yaml",
+        "wojtekxtx/foobar_parser": {
+            "path": "parsers/s01-parse/wojtekxtx/foobar_parser.yaml",
             "stage": "s01-parse",
             "version": "0.1",
             "versions": {
@@ -80,11 +80,11 @@
             "long_description": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "content": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "description": "A foobar parser",
-            "author": "crowdsecurity",
+            "author": "wojtekxtx",
             "labels": null
         },
-        "crowdsecurity/foobar_subparser": {
-            "path": "parsers/s01-parse/crowdsecurity/foobar_subparser.yaml",
+        "wojtekxtx/foobar_subparser": {
+            "path": "parsers/s01-parse/wojtekxtx/foobar_subparser.yaml",
             "stage": "s01-parse",
             "version": "0.1",
             "versions": {
@@ -96,14 +96,14 @@
             "long_description": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "content": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "description": "A foobar parser",
-            "author": "crowdsecurity",
+            "author": "wojtekxtx",
             "labels": null
         }
     },
     "postoverflows": {},
     "scenarios": {
-        "crowdsecurity/foobar_scenario": {
-            "path": "scenarios/crowdsecurity/foobar_scenario.yaml",
+        "wojtekxtx/foobar_scenario": {
+            "path": "scenarios/wojtekxtx/foobar_scenario.yaml",
             "version": "0.1",
             "versions": {
                 "0.1": {
@@ -114,7 +114,7 @@
             "long_description": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "content": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "description": "a foobar scenario",
-            "author": "crowdsecurity",
+            "author": "wojtekxtx",
             "labels": {
                 "remediation": "true",
                 "scope": "ip",
@@ -122,8 +122,8 @@
                 "type": "web_attack"
             }
         },
-        "crowdsecurity/barfoo_scenario": {
-            "path": "scenarios/crowdsecurity/barfoo_scenario.yaml",
+        "wojtekxtx/barfoo_scenario": {
+            "path": "scenarios/wojtekxtx/barfoo_scenario.yaml",
             "version": "0.1",
             "versions": {
                 "0.1": {
@@ -134,7 +134,7 @@
             "long_description": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "content": "bG9uZyBkZXNjcmlwdGlvbgo=",
             "description": "a foobar scenario",
-            "author": "crowdsecurity",
+            "author": "wojtekxtx",
             "labels": {
                 "remediation": "true",
                 "scope": "ip",

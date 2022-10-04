@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 )
