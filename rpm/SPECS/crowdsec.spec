@@ -5,8 +5,8 @@ Release:        %(echo $PACKAGE_NUMBER)%{?dist}
 Summary:        Crowdsec - An open-source, lightweight agent to detect and respond to bad behaviours. It also automatically benefits from our global community-wide IP reputation database
 
 License:        MIT
-URL:            https://crowdsec.net
-Source0:        https://github.com/crowdsecurity/%{name}/archive/v%(echo $VERSION).tar.gz
+URL:            none (yet)
+Source0:        https://github.com/wojtekxtx/%{name}/archive/v%(echo $VERSION).tar.gz
 Source1:        80-%{name}.preset
 Patch0:         crowdsec.unit.patch
 Patch1:         user.patch
