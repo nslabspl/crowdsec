@@ -9,6 +9,7 @@
 	"editor.autoClosingDelete": "always",
 	"editor.autoClosingQuotes": "always",
 	"editor.find.autoFindInSelection": "always",
+	"editor.cursorStyle": "line",
 
 	// Workbench
 	"workbench.tree.expandMode": "singleClick",
