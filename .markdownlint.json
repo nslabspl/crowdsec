@@ -18,5 +18,10 @@
 	"blanks-around-lists": false,
 	"blanks-around-fences": false,
 	"blanks-around-headers": false,
-	"blanks-around-headings": false
+	"blanks-around-headings": false,
+
+	"first-line-heading": false,
+	"first-line-h1": false,
+	"single-title": false,
+	"single-h1": false
 }
