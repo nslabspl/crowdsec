@@ -7,9 +7,4 @@
 	"code-fence-style": {
 		"style": "backtick"
 	},
-	"no-trailing-punctuation": true,
-	"no-trailing-spaces": true,
-	"ul-indent": false,
-	"blanks-around-lists": false,
-	"line-length": false
 }

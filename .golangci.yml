@@ -50,7 +50,7 @@ linters:
     - varcheck          # The owner seems to have abandoned the linter.  Replaced by unused.
 
     #
-    # Enabled
+    # Disabled
     #
 
     # - asasalint           # check for pass []any as any in variadic func(...any)
