@@ -9,5 +9,7 @@
 	},
 
 	"no-trailing-punctuation": true,
-	"no-trailing-spaces": true
+	"no-trailing-spaces": true,
+	"ul-indent": false,
+	"blanks-around-lists": false
 }
