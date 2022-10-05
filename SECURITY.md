@@ -5,7 +5,6 @@
 This security policy applies to :
  - Crowdsec agent
  - Crowdsec Local API
- - Crowdsec bouncers **developed and maintained** by the Crowdsec team [1]
 ## Reporting a Vulnerability
 
 We are extremely grateful to security researchers and users that report vulnerabilities regarding the Crowdsec project. All reports are thoroughly investigated by members of the Crowdsec organization.
