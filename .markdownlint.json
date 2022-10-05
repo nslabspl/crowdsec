@@ -7,10 +7,16 @@
 	"code-fence-style": {
 		"style": "backtick"
 	},
+	"ul-indent": false,
 
 	"no-trailing-punctuation": true,
 	"no-trailing-spaces": true,
 	"no-space-in-code": true,
 	"no-space-in-emphasis": true,
-	"no-space-in-links": true
+	"no-space-in-links": true,
+
+	"blanks-around-lists": false,
+	"blanks-around-fences": false,
+	"blanks-around-headers": false,
+	"blanks-around-headings": false
 }
