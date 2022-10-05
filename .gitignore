@@ -44,3 +44,6 @@ msi
 
 # Other
 pkg/acquisition/test_files/*.yaml
+
+# Stuff related to Azure
+azure*-*
