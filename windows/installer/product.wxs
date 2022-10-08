@@ -27,7 +27,7 @@
             <Directory Id="INSTALLDIR" Name="$(var.ProductName)">
                <Component Id="Crowdsec" Guid="200299fc-e728-4749-a283-cfbd20c02a59">
                   <File Id="crowdsec.exe" Source="cmd\crowdsec\crowdsec.exe" />
-                  <Condition>NOT AGENT_ONLY</Condition>
+                  <Condition>NOT_AGENT_ONLY</Condition>
                   <ServiceInstall Id="CrowdsecService" Name="Crowdsec" DisplayName="Crowdsec" Description="Crowdsec IPS/IDS" Start="auto" Type="ownProcess" ErrorControl="normal" Account="LocalSystem" Vital="yes" Interactive="no" />
                   <ServiceControl Id="CrowdsecService" Name="Crowdsec" Start="install" Stop="both" Remove="uninstall" Wait="yes" />
                </Component>
@@ -70,7 +70,7 @@
                   </Component>
                   <Component Id="Csconfig_lapi" Guid="a99bd70c-61af-43ca-8394-6dc789cec566">
                      <Condition>
-                        NOT AGENT_ONLY
+                        NOT_AGENT_ONLY
                      </Condition>
                      <File Id="config.yaml" Source="config\config_win.yaml" Name="config.yaml"/>
                   </Component>
