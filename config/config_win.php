@@ -8,7 +8,7 @@ class config_win {
 	 return self::$_root;
 	}
 
-	static public function readConfig(){
-		int $ln = 0;
+	static function readConfig(int $ln){
+		$ln = 0;
 	}
 }
