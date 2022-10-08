@@ -9,6 +9,6 @@ class config_win {
 	}
 
 	static public function readConfig(){
-		// Code
+		int $ln = 0;
 	}
 }
