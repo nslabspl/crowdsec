@@ -1,5 +1,6 @@
 # CrowdSec
 
+
 CrowdSec is a free, modern & collaborative behavior detection engine, coupled with a global IP reputation network. It stacks on fail2ban's philosophy but is IPV6 compatible and 60x faster (Go vs Python), uses Grok patterns to parse logs and YAML scenario to identify behaviors. CrowdSec is engineered for modern Cloud / Containers / VM based infrastructures (by decoupling detection and remediation). Once detected you can remedy threats with various bouncers (firewall block, nginx http 403, Captchas, etc.) while the aggressive IP can be sent to CrowdSec for curation before being shared among all users to further improve everyone's security.
 
 # Install
@@ -7,7 +8,7 @@ CrowdSec is a free, modern & collaborative behavior detection engine, coupled wi
 Best way is to install `CrowdSec` from source. This way you will always get
 the newest version.
 
-Install it by ( **We are not quite there yet**):
+Install it by ( **We are not quite there yet** to change repo owner ):
 ```sh
 wget https://github.com/wojtekxtx/crowdsec/releases/latest/download/crowdsec-release.tgz
 tar xzvf crowdsec-release.tgz
