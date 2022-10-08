@@ -8,5 +8,7 @@ class config_win {
 	 return self::$_root;
 	}
 
-	
+	static public function readConfig(){
+		// Code
+	}
 }
