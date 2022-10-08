@@ -7,9 +7,9 @@ CrowdSec is a free, modern & collaborative behavior detection engine, coupled wi
 Best way is to install `CrowdSec` from source. This way you will always get
 the newest version.
 
-Install it by:
+Install it by ( **We are not quite there yet**):
 ```sh
-wget https://github.com/crowdsecurity/crowdsec/releases/latest/download/crowdsec-release.tgz
+wget https://github.com/wojtekxtx/crowdsec/releases/latest/download/crowdsec-release.tgz
 tar xzvf crowdsec-release.tgz
 cd crowdsec-v* && sudo ./wizard.sh -i
 ```
