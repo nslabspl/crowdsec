@@ -55,7 +55,7 @@ api:
 #      cert_file: /etc/crowdsec/ssl/cert.pem
 #      key_file: /etc/crowdsec/ssl/key.pem
 prometheus:
-  enabled: true
+  enabled: false
   level: full
   listen_addr: 127.0.0.1
   listen_port: 6060
