@@ -16,17 +16,17 @@ And finally to create the choco package and msi execute the script at root level
  [make installer](/install_installer_windows.ps1) 
  ./make_installer.ps1
 
-You should now have a CrowdSec.0.0.1.nupkg file 
-you can test it using 
-choco install CrowdSec.0.0.1.nupkg 
-it will install and configure crowdsec for windows. 
+You should now have a CrowdSec.0.0.1.nupkg file you can test it using `choco install CrowdSec.0.0.1.nupkg`
+It will install and configure crowdsec for windows. 
 
-To test it navigate to C:\Program Files\CrowdSec and test the cli 
-.\crowdsec-cli.exe metrics
+To test it navigate to C:\Program Files\CrowdSec and test the cli:
+`.\crowdsec-cli.exe metrics`
 
-Install something from the hub 
-.\crowdsec-cli.exe parsers install crowdsecurity/syslog-logs
+Install something from the hub:
+`.\crowdsec-cli.exe parsers install crowdsecurity/syslog-logs`
 
-and restart the windows service 
+and restart the windows service:
+```bash
 net start crowdsec 
 net stop crowdsec
+```

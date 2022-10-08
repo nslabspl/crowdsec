@@ -24,5 +24,6 @@
 	"first-line-heading": false,
 	"first-line-h1": false,
 	"single-title": false,
-	"single-h1": false
+	"single-h1": false,
+	"single-trailing-newline": false
 }
