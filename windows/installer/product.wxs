@@ -10,7 +10,7 @@
 
 <?define ProductName="CrowdSec"?>
 
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix>
 
    <Product Id="*" UpgradeCode="8eab6970-25e3-4b7d-882f-5b7efa311afc" Name="$(var.ProductName)" Version="$(var.Version)" Manufacturer="CrowdSecurity" Language="1033">
 
