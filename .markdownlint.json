@@ -14,6 +14,7 @@
 	"no-space-in-code": true,
 	"no-space-in-emphasis": true,
 	"no-space-in-links": true,
+	"no-emphasis-as-header": false,
 
 	"blanks-around-lists": false,
 	"blanks-around-fences": false,

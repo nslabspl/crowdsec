@@ -10,12 +10,24 @@
 	"editor.autoClosingQuotes": "always",
 	"editor.find.autoFindInSelection": "always",
 	"editor.cursorStyle": "line",
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "modifications",
+	"editor.formatOnPaste": true,
 
 	// Workbench
 	"workbench.tree.expandMode": "singleClick",
 	"workbench.tree.indent": 8,
 	"workbench.tree.renderIndentGuides": "onHover",
 	"workbench.colorTheme": "Abyss",
+	"workbench.editor.closeOnFileDelete": true,
+	"workbench.editor.tabCloseButton": "left",
+	"workbench.startupEditor": "none",
+	
+	// Files
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 1000,
+	"files.insertFinalNewline": false,
+	"files.saveConflictResolution": "askUser",
 
 	// MarkDown
 	"markdownlint.ignore": ".markdownlintignore"
