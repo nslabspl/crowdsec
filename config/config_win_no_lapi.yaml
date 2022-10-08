@@ -22,7 +22,7 @@ api:
     insecure_skip_verify: false
     credentials_path:  C:\ProgramData\CrowdSec\config\local_api_credentials.yaml
 prometheus:
-  enabled: true
+  enabled: false
   level: full
   listen_addr: 127.0.0.1
   listen_port: 6060
