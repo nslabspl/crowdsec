@@ -3,12 +3,12 @@
 
 roles:
   - src: geerlingguy.mysql
-  - src: https://github.com/crowdsecurity/ansible-role-postgresql
+  - src: https://github.com/wojtekxtx/ansible-role-postgresql
     version: crowdsec
     name: geerlingguy.postgresql
 
 collections:
-  - name: https://github.com/crowdsecurity/ansible-collection-crowdsecurity.testing.git
+  - name: https://github.com/wojtekxtx/ansible-collection-crowdsecurity.testing.git
     type: git
     version: main
 

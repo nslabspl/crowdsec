@@ -4,7 +4,7 @@
   <metadata>
     <id>crowdsec</id>
     <version>1.3.3</version>
-    <packageSourceUrl>https://github.com/crowdsecurity/crowdsec</packageSourceUrl>
+    <packageSourceUrl>https://github.com/wojtekxtx/crowdsec</packageSourceUrl>
     <owners>CrowdSecurity</owners>
     <!-- ============================== -->
 
@@ -13,11 +13,11 @@
     <authors>CrowdSecurity</authors>
     <projectUrl>https://crowdsec.net/</projectUrl>
     <copyright>CrowdSec, 2022</copyright>
-    <licenseUrl>https://github.com/crowdsecurity/crowdsec/blob/main/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/wojtekxtx/crowdsec/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/crowdsecurity/crowdsec</projectSourceUrl>
+    <projectSourceUrl>https://github.com/wojtekxtx/crowdsec</projectSourceUrl>
     <docsUrl>https://docs.crowdsec.net</docsUrl>
-    <bugTrackerUrl>https://github.com/crowdsecurity/crowdsec/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://github.com/wojtekxtx/crowdsec/issues</bugTrackerUrl>
     <tags>crowdsec crowdsecurity security ips ids</tags>
     <summary>CrowdSec IDS</summary>
     <description>

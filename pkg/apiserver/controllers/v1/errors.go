@@ -3,7 +3,7 @@ package v1
 import (
 	"net/http"
 
-	"github.com/crowdsecurity/crowdsec/pkg/database"
+	"github.com/wojtekxtx/crowdsec/pkg/database"
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 )

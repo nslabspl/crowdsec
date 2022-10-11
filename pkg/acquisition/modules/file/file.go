@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/acquisition/configuration"
-	leaky "github.com/crowdsecurity/crowdsec/pkg/leakybucket"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/acquisition/configuration"
+	leaky "github.com/wojtekxtx/crowdsec/pkg/leakybucket"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/fsnotify/fsnotify"
 	"github.com/nxadm/tail"
 	"github.com/pkg/errors"
@@ -268,7 +268,7 @@ func (f *FileSource) StreamingAcquisition(out chan types.Event, t *tomb.Tomb) er
 			continue
 		}
 
-		//cf. https://github.com/crowdsecurity/crowdsec/issues/1168
+		//cf. https://github.com/wojtekxtx/crowdsec/issues/1168
 		//do not rely on stat, reclose file immediately as it's opened by Tail
 		fd, err := os.Open(file)
 		if err != nil {
@@ -360,7 +360,7 @@ func (f *FileSource) monitorNewFiles(out chan types.Event, t *tomb.Tomb) error {
 					logger.Debugf("Already tailing file %s, not creating a new tail", event.Name)
 					break
 				}
-				//cf. https://github.com/crowdsecurity/crowdsec/issues/1168
+				//cf. https://github.com/wojtekxtx/crowdsec/issues/1168
 				//do not rely on stat, reclose file immediately as it's opened by Tail
 				fd, err := os.Open(event.Name)
 				if err != nil {

@@ -14,7 +14,7 @@ import (
 
 	"github.com/c-robinson/iplib"
 
-	"github.com/crowdsecurity/crowdsec/pkg/database"
+	"github.com/wojtekxtx/crowdsec/pkg/database"
 	"github.com/davecgh/go-spew/spew"
 	log "github.com/sirupsen/logrus"
 )

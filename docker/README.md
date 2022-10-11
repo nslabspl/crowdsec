@@ -2,7 +2,7 @@
 
 * Documentation and help: https://docs.crowdsec.net/
 * Crowdsec concepts: https://docs.crowdsec.net/docs/concepts
-* Where to file issues: https://github.com/crowdsecurity/crowdsec
+* Where to file issues: <https://github.com/wojtekxtx/crowdsec>
 
 # What is Crowdsec
 
@@ -24,16 +24,15 @@ This can be done by adding the following volume mount to your docker command:
 ```
 
 ### Logs ingestion and processing
-Collections are a good place to start: https://docs.crowdsec.net/docs/collections/intro
+Collections are a good place to start: <https://docs.crowdsec.net/docs/collections/intro>
 
-Find collections|scenarios|parsers|postoverflows in the hub: https://hub.crowdsec.net
-
+Find collections|scenarios|parsers|postoverflows in the hub: <https://hub.crowdsec.net>
 
 * Specify collections|scenarios|parsers/postoverflows to install via the environment variables (by default [`crowdsecurity/linux`](https://hub.crowdsec.net/author/crowdsecurity/collections/linux) is installed)
 * Mount volumes to specify your log files that should be ingested by crowdsec
 ### Acquisition
 
-`/etc/crowdsec/acquis.yaml` maps logs to provided parsers. Find out more here: https://docs.crowdsec.net/docs/concepts/#acquisition
+`/etc/crowdsec/acquis.yaml` maps logs to provided parsers. Find out more here: <https://docs.crowdsec.net/docs/concepts/#acquisition>
 
 acquis.yaml example:
 ```shell
@@ -74,10 +73,10 @@ docker run -d \
 
 ## ... or docker-compose
 
-Check this full stack example using docker-compose: https://github.com/crowdsecurity/example-docker-compose
+Check this full stack example using docker-compose: <https://github.com/wojtekxtx/example-docker-compose>
 # How to extend this image
 ## Full configuration
-The container is built with specific docker [configuration](https://github.com/crowdsecurity/crowdsec/blob/master/docker/config.yaml). If you need to change it, bind `/etc/crowdsec/config.yaml` to your local configuration file
+The container is built with specific docker [configuration](https://github.com/wojtekxtx/crowdsec/blob/master/docker/config.yaml). If you need to change it, bind `/etc/crowdsec/config.yaml` to your local configuration file
 ## Notifications
 If you wish to use the [notification system](https://docs.crowdsec.net/docs/notification_plugins/intro), you will need to mount at least a custom `profiles.yaml` and a notification configuration to `/etc/crowdsec/notifications`
 
@@ -171,7 +170,7 @@ Using binds rather than named volumes ([more explanation here](https://docs.dock
 
 # Find Us
 
-* [GitHub](https://github.com/crowdsecurity/crowdsec)
+* [GitHub](https://github.com/wojtekxtx/crowdsec)
 
 # Contributing
 
@@ -179,4 +178,4 @@ Please read [contributing](https://docs.crowdsec.net/Crowdsec/v1/contributing/) 
 
 # License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/crowdsecurity/crowdsec/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/wojtekxtx/crowdsec/blob/master/LICENSE) file for details.

@@ -4,14 +4,14 @@ import (
 	"context"
 	"net"
 
-	//"github.com/crowdsecurity/crowdsec/pkg/apiserver/controllers"
+	//"github.com/wojtekxtx/crowdsec/pkg/apiserver/controllers"
 
-	middlewares "github.com/crowdsecurity/crowdsec/pkg/apiserver/middlewares/v1"
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/csplugin"
-	"github.com/crowdsecurity/crowdsec/pkg/csprofiles"
-	"github.com/crowdsecurity/crowdsec/pkg/database"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	middlewares "github.com/wojtekxtx/crowdsec/pkg/apiserver/middlewares/v1"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/csplugin"
+	"github.com/wojtekxtx/crowdsec/pkg/csprofiles"
+	"github.com/wojtekxtx/crowdsec/pkg/database"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 	"github.com/pkg/errors"
 )
 

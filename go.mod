@@ -1,4 +1,4 @@
-module github.com/crowdsecurity/crowdsec
+module github.com/wojtekxtx/crowdsec
 
 go 1.19
 
@@ -15,8 +15,8 @@ require (
 	github.com/c-robinson/iplib v1.0.3
 	github.com/confluentinc/bincover v0.2.0
 	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf
-	github.com/crowdsecurity/grokky v0.0.0-20220120093523-d5b3478363fa
-	github.com/crowdsecurity/machineid v1.0.2
+	github.com/wojtekxtx/grokky v0.0.0-20220120093523-d5b3478363fa
+	github.com/wojtekxtx/machineid v1.0.2
 	github.com/davecgh/go-spew v1.1.1
 	github.com/dghubble/sling v1.3.0
 	github.com/docker/docker v20.10.2+incompatible
@@ -173,4 +173,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace golang.org/x/time/rate => github.com/crowdsecurity/crowdsec/pkg/time/rate v0.0.0
+	replace golang.org/x/time/rate => github.com/wojtekxtx/crowdsec/pkg/time/rate v0.0.0

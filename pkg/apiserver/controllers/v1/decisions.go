@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 	"github.com/gin-gonic/gin"
 	log "github.com/sirupsen/logrus"
 )

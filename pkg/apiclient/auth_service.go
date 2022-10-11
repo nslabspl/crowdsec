@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 )
 
 // type ApiAlerts service

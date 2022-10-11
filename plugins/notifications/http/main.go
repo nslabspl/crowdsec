@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/crowdsecurity/crowdsec/pkg/protobufs"
+	"github.com/wojtekxtx/crowdsec/pkg/protobufs"
 	"github.com/hashicorp/go-hclog"
 	plugin "github.com/hashicorp/go-plugin"
 	"gopkg.in/yaml.v2"

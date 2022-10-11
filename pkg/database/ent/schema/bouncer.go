@@ -3,7 +3,7 @@ package schema
 import (
 	"entgo.io/ent"
 	"entgo.io/ent/schema/field"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 )
 
 // Bouncer holds the schema definition for the Bouncer entity.

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent/bouncer"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent/bouncer"
 	"github.com/pkg/errors"
 )
 

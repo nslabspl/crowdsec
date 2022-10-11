@@ -9,9 +9,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/csplugin"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/csplugin"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 	"github.com/gin-gonic/gin"
 
 	log "github.com/sirupsen/logrus"

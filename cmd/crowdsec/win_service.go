@@ -11,8 +11,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/sys/windows"

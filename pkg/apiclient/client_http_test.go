@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwversion"
+	"github.com/wojtekxtx/crowdsec/pkg/cwversion"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 )

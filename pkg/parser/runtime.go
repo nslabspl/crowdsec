@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/exprhelpers"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/exprhelpers"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 
 	"strconv"
 

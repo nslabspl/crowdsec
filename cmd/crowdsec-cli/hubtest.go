@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/AlecAivazis/survey/v2"
-	"github.com/crowdsecurity/crowdsec/pkg/cstest"
+	"github.com/wojtekxtx/crowdsec/pkg/cstest"
 	"github.com/enescakir/emoji"
 	"github.com/olekukonko/tablewriter"
 	log "github.com/sirupsen/logrus"

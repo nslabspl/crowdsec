@@ -8,8 +8,8 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cstest"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/cstest"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

@@ -3,7 +3,7 @@ package leakybucket
 import (
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/davecgh/go-spew/spew"
 	log "github.com/sirupsen/logrus"
 )

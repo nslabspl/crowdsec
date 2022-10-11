@@ -41,35 +41,35 @@ Signals sent to the curation platform are limited to the very strict minimum: IP
 
 <details open>
   <summary>Initial configuration is automated, providing functional out-of-the-box setup</summary>
-  <img src="https://github.com/crowdsecurity/crowdsec-docs/blob/main/crowdsec-docs/static/img/crowdsec_install.gif?raw=true">
+  <img src="https://github.com/wojtekxtx/crowdsec-docs/blob/main/crowdsec-docs/static/img/crowdsec_install.gif?raw=true">
 </details>
 
 ## Out of the box detection
 
 <details>
   <summary>Baseline detection is effective out-of-the-box, no fine-tuning required (click to expand)</summary>
-  <img src="https://github.com/crowdsecurity/crowdsec-docs/blob/main/crowdsec-docs/static/img/out-of-the-box-protection.gif?raw=true">
+  <img src="https://github.com/wojtekxtx/crowdsec-docs/blob/main/crowdsec-docs/static/img/out-of-the-box-protection.gif?raw=true">
 </details>
 
 ## Easy bouncer deployment
 
 <details>
   <summary>It's trivial to add bouncers to enforce decisions of crowdsec (click to expand)</summary>
-  <img src="https://github.com/crowdsecurity/crowdsec-docs/blob/main/crowdsec-docs/static/img/blocker-installation.gif?raw=true">
+  <img src="https://github.com/wojtekxtx/crowdsec-docs/blob/main/crowdsec-docs/static/img/blocker-installation.gif?raw=true">
 </details>
 
 ## Easy dashboard access
 
 <details>
   <summary>It's easy to deploy a metabase interface to view your data simply with cscli (click to expand)</summary>
-  <img src="https://github.com/crowdsecurity/crowdsec-docs/blob/main/crowdsec-docs/static/img/cscli-metabase.gif?raw=true">
+  <img src="https://github.com/wojtekxtx/crowdsec-docs/blob/main/crowdsec-docs/static/img/cscli-metabase.gif?raw=true">
 </details>
 
 ## Hot & Cold logs
 
 <details>
   <summary>Process cold logs, for forensic, tests and chasing false-positives & false negatives (click to expand)</summary>
-  <img src="https://github.com/crowdsecurity/crowdsec-docs/blob/main/crowdsec-docs/static/img/forensic-mode.gif?raw=true">
+  <img src="https://github.com/wojtekxtx/crowdsec-docs/blob/main/crowdsec-docs/static/img/forensic-mode.gif?raw=true">
 </details>
 
 

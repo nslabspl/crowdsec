@@ -5,9 +5,9 @@ package enttest
 import (
 	"context"
 
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent"
 	// required by schema hooks.
-	_ "github.com/crowdsecurity/crowdsec/pkg/database/ent/runtime"
+	_ "github.com/wojtekxtx/crowdsec/pkg/database/ent/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
 )

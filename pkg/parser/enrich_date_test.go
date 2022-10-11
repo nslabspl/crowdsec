@@ -3,7 +3,7 @@ package parser
 import (
 	"testing"
 
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	log "github.com/sirupsen/logrus"
 )
 

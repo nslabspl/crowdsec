@@ -11,9 +11,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"

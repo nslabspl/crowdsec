@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/apiclient"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
-	"github.com/crowdsecurity/crowdsec/pkg/yamlpatch"
+	"github.com/wojtekxtx/crowdsec/pkg/apiclient"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/yamlpatch"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v2"

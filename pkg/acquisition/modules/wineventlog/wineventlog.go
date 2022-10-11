@@ -5,8 +5,8 @@ package wineventlogacquisition
 import (
 	"errors"
 
-	"github.com/crowdsecurity/crowdsec/pkg/acquisition/configuration"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/acquisition/configuration"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/prometheus/client_golang/prometheus"
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/tomb.v2"

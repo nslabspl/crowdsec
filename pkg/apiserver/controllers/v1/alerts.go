@@ -10,9 +10,9 @@ import (
 
 	jwt "github.com/appleboy/gin-jwt/v2"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csplugin"
-	"github.com/crowdsecurity/crowdsec/pkg/database/ent"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/csplugin"
+	"github.com/wojtekxtx/crowdsec/pkg/database/ent"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
 	"github.com/gin-gonic/gin"
 	"github.com/go-openapi/strfmt"
 	log "github.com/sirupsen/logrus"

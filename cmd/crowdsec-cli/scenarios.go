@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 

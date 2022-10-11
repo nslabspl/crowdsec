@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	leaky "github.com/crowdsecurity/crowdsec/pkg/leakybucket"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	leaky "github.com/wojtekxtx/crowdsec/pkg/leakybucket"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/prometheus/client_golang/prometheus"
 	log "github.com/sirupsen/logrus"
 )

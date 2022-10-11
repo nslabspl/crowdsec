@@ -8,10 +8,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/database"
-	"github.com/crowdsecurity/crowdsec/pkg/models"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/database"
+	"github.com/wojtekxtx/crowdsec/pkg/models"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	log "github.com/sirupsen/logrus"
 
 	"testing"

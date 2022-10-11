@@ -6,8 +6,8 @@ import (
 	"github.com/antonmedv/expr"
 	"github.com/antonmedv/expr/vm"
 
-	"github.com/crowdsecurity/crowdsec/pkg/exprhelpers"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/exprhelpers"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 )
 
 // Uniq creates three new functions that share the same initialisation and the same scope.

@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"time"
 
-	middlewares "github.com/crowdsecurity/crowdsec/pkg/apiserver/middlewares/v1"
-	"github.com/crowdsecurity/crowdsec/pkg/database"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	middlewares "github.com/wojtekxtx/crowdsec/pkg/apiserver/middlewares/v1"
+	"github.com/wojtekxtx/crowdsec/pkg/database"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/enescakir/emoji"
 	"github.com/olekukonko/tablewriter"
 	"github.com/pkg/errors"

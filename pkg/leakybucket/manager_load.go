@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/crowdsecurity/crowdsec/pkg/csconfig"
-	"github.com/crowdsecurity/crowdsec/pkg/cwhub"
-	"github.com/crowdsecurity/crowdsec/pkg/cwversion"
-	"github.com/crowdsecurity/crowdsec/pkg/types"
+	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
+	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
+	"github.com/wojtekxtx/crowdsec/pkg/cwversion"
+	"github.com/wojtekxtx/crowdsec/pkg/types"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/sirupsen/logrus"
@@ -25,7 +25,7 @@ import (
 	"gopkg.in/tomb.v2"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/crowdsecurity/crowdsec/pkg/exprhelpers"
+	"github.com/wojtekxtx/crowdsec/pkg/exprhelpers"
 )
 
 // BucketFactory struct holds all fields for any bucket configuration. This is to have a
