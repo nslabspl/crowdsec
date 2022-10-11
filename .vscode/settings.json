@@ -8,7 +8,7 @@
 	"editor.autoClosingBrackets": "always",
 	"editor.autoClosingDelete": "always",
 	"editor.autoClosingQuotes": "always",
-	"editor.find.autoFindInSelection": "always",
+	"editor.find.autoFindInSelection": "never",
 	"editor.cursorStyle": "line",
 	"editor.formatOnSave": true,
 	"editor.formatOnSaveMode": "modifications",
