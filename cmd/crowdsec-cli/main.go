@@ -133,6 +133,21 @@ It is meant to allow you to manage bans, parsers/scenarios/etc, api and generall
 		SilenceUsage:      true,
 		/*TBD examples*/
 	}
+
+	cc.Init(&cc.Config{
+		RootCmd: rootCmd,
+		Headings: cc.Yellow,
+		Commands: cc.Green + cc.Bold,
+		CmdShortDescr: cc.Cyan,
+		Example: cc.Italic,
+		ExecName: cc.Bold,
+		Aliases: cc.Bold + cc.Italic,
+		FlagsDataType: cc.White,
+		Flags: cc.Green,
+		FlagsDescr: cc.Cyan,
+	})
+	rootCmd.SetOut(color.Output)
+
 	var cmdDocGen = &cobra.Command{
 		Use:               "doc",
 		Short:             "Generate the documentation in `./doc/`. Directory must exist.",

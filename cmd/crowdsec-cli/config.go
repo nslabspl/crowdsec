@@ -8,8 +8,10 @@ import (
 	"path/filepath"
 
 	"github.com/antonmedv/expr"
-
 	"github.com/pkg/errors"
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
+	"gopkg.in/yaml.v2"
 
 	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
 	"github.com/wojtekxtx/crowdsec/pkg/cwhub"

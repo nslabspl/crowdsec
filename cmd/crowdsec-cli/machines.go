@@ -18,6 +18,7 @@ import (
 	"github.com/wojtekxtx/crowdsec/pkg/types"
 	"github.com/wojtekxtx/machineid"
 	"github.com/enescakir/emoji"
+	"github.com/fatih/color"
 	"github.com/go-openapi/strfmt"
 	"github.com/google/uuid"
 	"github.com/olekukonko/tablewriter"
