@@ -1,4 +1,4 @@
-module github.com/wojtekxtx/email-plugin
+module github.com/crowdsecurity/email-plugin
 
 go 1.16
 
