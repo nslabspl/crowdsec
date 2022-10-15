@@ -1,0 +1,19 @@
+diff --git a/platform/windows.mk b/platform/windows.mk
+index 0370859..0089454 100644
+--- a/platform/windows.mk
++++ b/platform/windows.mk
+@@ -14,11 +14,11 @@ MINIMUM_SUPPORTED_GO_MAJOR_VERSION = 1
+ MINIMUM_SUPPORTED_GO_MINOR_VERSION = 17
+ GO_VERSION_VALIDATION_ERR_MSG = Golang version ($(BUILD_GOVERSION)) is not supported, please use least $(MINIMUM_SUPPORTED_GO_MAJOR_VERSION).$(MINIMUM_SUPPORTED_GO_MINOR_VERSION)
+ #Current versioning information from env
+-#BUILD_VERSION?=$(shell (Invoke-WebRequest -UseBasicParsing -Uri https://api.github.com/repos/crowdsecurity/crowdsec/releases/latest).Content | jq -r '.tag_name')
+-#hardcode it till i find a workaround
++BUILD_VERSION?=$(shell (Invoke-WebRequest -UseBasicParsing -Uri https://api.github.com/repos/wojtekxtx/crowdsec/releases/latest).Content | jq -r '.tag_name')
++#hardcode it till workaround is found
+ BUILD_VERSION?=$(shell git describe --tags $$(git rev-list --tags --max-count=1))
+ BUILD_GOVERSION?=$(shell (go env GOVERSION).replace("go",""))
+-BUILD_CODENAME?=alphaga
++BUILD_CODENAME?=alpha
+ BUILD_TIMESTAMP?=$(shell Get-Date -Format "yyyy-MM-dd_HH:mm:ss")
+ BUILD_TAG?=$(shell git rev-parse HEAD)
+ DEFAULT_CONFIGDIR?=C:\\ProgramData\\CrowdSec\\config
