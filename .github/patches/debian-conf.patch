@@ -1,0 +1,27 @@
+diff --git a/config/user.yaml b/config/user.yaml
+index f3ab214..2050762 100644
+--- a/config/user.yaml
++++ b/config/user.yaml
+@@ -10,10 +10,10 @@ config_paths:
+   data_dir: /var/lib/crowdsec/data
+   #simulation_path: /etc/crowdsec/config/simulation.yaml
+   #hub_dir: /etc/crowdsec/hub/
+-  #index_path: ./config/hub/.index.json
++  index_path: ./config/hub/.index.json
+ crowdsec_service:
+   #acquisition_path: ./config/acquis.yaml
+-  parser_routines: 1
++  #parser_routines: 1
+ cscli:
+   output: human
+ db_config:
+diff --git a/debian/.gitignore b/debian/.gitignore
+index 325e494..59666d3 100644
+--- a/debian/.gitignore
++++ b/debian/.gitignore
+@@ -5,3 +5,4 @@
+ /*.log
+ /*.debhelper
+ /*-stamp
++changelog
+\ No newline at end of file
