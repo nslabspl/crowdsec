@@ -8,6 +8,7 @@ labels:
 filenames:
  - /var/log/auth.log
  - /var/log/syslog
+ - /var/log/dmesg
 labels:
   type: syslog
 ---
