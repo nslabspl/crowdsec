@@ -24,5 +24,9 @@
 	"first-line-heading": false,
 	"first-line-h1": false,
 	"single-title": false,
-	"single-h1": false
+	"single-h1": false,
+
+	"no-multiple-space-atx": false,
+	"no-duplicate-heading": false,
+	"no-duplicate-header": false
 }
