@@ -16,9 +16,9 @@ CISCOFW104001 \((?:Primary|Secondary)\) Switching to ACTIVE - %{GREEDYDATA:switc
 # ASA-1-104002
 CISCOFW104002 \((?:Primary|Secondary)\) Switching to STANDBY - %{GREEDYDATA:switch_reason}
 # ASA-1-104003
-CISCOFW104003 \((?:Primary|Secondary)\) Switching to FAILED\.
+CISCOFW104003 \((?:Primary|Secondary)\) Switching to FAILED MODE\.
 # ASA-1-104004
-CISCOFW104004 \((?:Primary|Secondary)\) Switching to OK\.
+CISCOFW104004 \((?:Primary|Secondary)\) Switching to OK MODE\.
 # ASA-1-105003
 CISCOFW105003 \((?:Primary|Secondary)\) Monitoring on [Ii]nterface %{GREEDYDATA:interface_name} waiting
 # ASA-1-105004
