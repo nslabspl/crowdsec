@@ -3,6 +3,6 @@ event_channel: Security
 event_ids:
  - 4625
  - 4623
-event_level: information
+event_level: info
 labels:
  type: eventlog
