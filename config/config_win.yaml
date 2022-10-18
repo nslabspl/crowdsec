@@ -24,7 +24,7 @@ db_config:
   #user: 
   #password:
   #db_name:
-  #host:
+  host: localhost
   #port:
   flush:
     max_items: 5000
