@@ -1,4 +1,4 @@
 contact_links:
-  - name: Support Request
+  - name: Support Request (community)
     url: https://discourse.crowdsec.net
-    about: Support request or question relating to Crowdsec
+    about: Support request or question related to Crowdsec
