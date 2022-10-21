@@ -27,7 +27,7 @@ fi
 
 # regenerate local agent credentials (ignore if agent is disabled)
 if [ "$DISABLE_AGENT" == "" ] ; then
-    echo "Regenerate local agent credentials"
+    echo "Regenerating local agent credentials"
     cscli -c "$CS_CONFIG_FILE" machines delete ${CUSTOM_HOSTNAME:-localhost}
     if [ "$LOCAL_API_URL" != "" ] ; then
         cscli -c "$CS_CONFIG_FILE" machines add ${CUSTOM_HOSTNAME:-localhost} --auto --url $LOCAL_API_URL
@@ -35,7 +35,7 @@ if [ "$DISABLE_AGENT" == "" ] ; then
         cscli -c "$CS_CONFIG_FILE" machines add ${CUSTOM_HOSTNAME:-localhost} --auto
     fi
     if [ "$AGENT_USERNAME" != "" ] && [ "$AGENT_PASSWORD" != "" ] && [ "$LOCAL_API_URL" != "" ] ; then
-        echo "set up lapi credentials for agent"
+        echo "setting up LAPI credentials for agent"
         CONFIG_PATH=$(yq eval '.api.client.credentials_path' "$CS_CONFIG_FILE" )
         echo "url: $LOCAL_API_URL" > $CONFIG_PATH
         echo "login: $AGENT_USERNAME" >> $CONFIG_PATH
@@ -44,14 +44,14 @@ if [ "$DISABLE_AGENT" == "" ] ; then
 fi
 
 # Check if lapi needs to automatically register an agent
-echo "Check if lapi need to register automatically an agent"
+echo "Check if LAPI need to register automatically an agent"
 if [ "$DISABLE_LOCAL_API" == "" ] && [ "$AGENT_USERNAME" != "" ] && [ "$AGENT_PASSWORD" != "" ] ; then
     if [ "$LOCAL_API_URL" != "" ] ; then
         cscli -c "$CS_CONFIG_FILE" machines add $AGENT_USERNAME --password $AGENT_PASSWORD --url $LOCAL_API_URL
     else
         cscli -c "$CS_CONFIG_FILE" machines add $AGENT_USERNAME --password $AGENT_PASSWORD
     fi
-    echo "Agent registered to lapi"
+    echo "LAPI agent registered"
 fi
 
 # registration to online API for signal push
@@ -86,7 +86,7 @@ if [ "$GID" != "" ]; then
     DB_PATH=$(yq eval '.db_config.db_path' "$CS_CONFIG_FILE")
     if [ "$IS_SQLITE" == "true" ]; then
         chown :$GID $DB_PATH
-        echo "sqlite database permissions updated"
+        echo "SQLite database permissions updated"
     fi
 fi
 
