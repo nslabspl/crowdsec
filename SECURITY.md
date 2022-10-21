@@ -9,7 +9,7 @@ This security policy applies to :
 
 We are extremely grateful to security researchers and users that report vulnerabilities regarding the Crowdsec project. All reports are thoroughly investigated by members of the Crowdsec organization.
 
-You can email the private [wojtekxtx[at]gmail[dot]com](mailto:wojtekxtx@gmail.com) list with the security details and the details.
+You can email the private [wojtekxtx[at]gmail[dot]com](mailto:wojtekxtx@gmail.com) list with the security details.
 
 ## When Should I Report a Vulnerability?
 
