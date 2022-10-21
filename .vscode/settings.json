@@ -31,5 +31,8 @@
 	"files.saveConflictResolution": "askUser",
 
 	// MarkDown
-	"markdownlint.ignore": ".markdownlintignore"
+	"markdownlint.ignore": ".markdownlintignore",
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-issue-config.json": "file:///Users/wlisik/crowdsec/.github/ISSUE_TEMPLATE/config.yml"
+	}
 }
