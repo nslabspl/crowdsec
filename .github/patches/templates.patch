@@ -1,0 +1,62 @@
+diff --git a/.github/ISSUE_TEMPLATE/config.yml b/.github/ISSUE_TEMPLATE/config.yml
+index 61de159..fd4427f 100644
+--- a/.github/ISSUE_TEMPLATE/config.yml
++++ b/.github/ISSUE_TEMPLATE/config.yml
+@@ -1,4 +1,8 @@
++blank_issues_enabled: false
+ contact_links:
+-  - name: Support Request
++  - name: Support Request (community)
+     url: https://discourse.crowdsec.net
+-    about: Support request or question relating to Crowdsec
++    about: Support request or question related to Crowdsec
++  - name: Google
++    url: https://google.com
++    about: Just search what others have to say regarding your problem.
+diff --git a/.github/ISSUE_TEMPLATE/feature_request.yaml b/.github/ISSUE_TEMPLATE/feature_request.yaml
+index 6449cee..790567c 100644
+--- a/.github/ISSUE_TEMPLATE/feature_request.yaml
++++ b/.github/ISSUE_TEMPLATE/feature_request.yaml
+@@ -7,7 +7,7 @@ body:
+     attributes:
+       label: What would you like to be added?
+       description: |
+-        Significant feature requests are unlikely to make progress as issues. Please consider engaging on discord (discord.gg/crowdsec) and forums (https://discourse.crowdsec.net), instead.
++        You are *more than welcome* to open issue requesting new features. Please remember, however, **one feature per issue**
+     validations:
+       required: true
+ 
+@@ -16,4 +16,4 @@ body:
+     attributes:
+       label: Why is this needed?
+     validations:
+-      required: true
++      required: false
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+index 2602ded..71713a5 100644
+--- a/.vscode/settings.json
++++ b/.vscode/settings.json
+@@ -31,5 +31,8 @@
+ 	"files.saveConflictResolution": "askUser",
+ 
+ 	// MarkDown
+-	"markdownlint.ignore": ".markdownlintignore"
++	"markdownlint.ignore": ".markdownlintignore",
++	"yaml.schemas": {
++		"https://json.schemastore.org/github-issue-config.json": "file:///Users/wlisik/crowdsec/.github/ISSUE_TEMPLATE/config.yml"
++	}
+ }
+\ No newline at end of file
+diff --git a/SECURITY.md b/SECURITY.md
+index 5549798..cf12422 100644
+--- a/SECURITY.md
++++ b/SECURITY.md
+@@ -9,7 +9,7 @@ This security policy applies to :
+ 
+ We are extremely grateful to security researchers and users that report vulnerabilities regarding the Crowdsec project. All reports are thoroughly investigated by members of the Crowdsec organization.
+ 
+-You can email the private [wojtekxtx[at]gmail[dot]com](mailto:wojtekxtx@gmail.com) list with the security details and the details.
++You can email the private [wojtekxtx[at]gmail[dot]com](mailto:wojtekxtx@gmail.com) list with the security details.
+ 
+ ## When Should I Report a Vulnerability?
+ 
