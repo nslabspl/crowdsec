@@ -7,7 +7,7 @@ body:
     attributes:
       label: What would you like to be added?
       description: |
-        Significant feature requests are unlikely to make progress as issues. Please consider engaging on discord (discord.gg/crowdsec) and forums (https://discourse.crowdsec.net), instead.
+        You are *more than welcome* to open issue requesting new features. Please remember, however, **one feature per issue**
     validations:
       required: true
 
