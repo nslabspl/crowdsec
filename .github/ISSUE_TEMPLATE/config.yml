@@ -1,4 +1,8 @@
+blank_issues_enabled: false
 contact_links:
   - name: Support Request (community)
     url: https://discourse.crowdsec.net
     about: Support request or question related to Crowdsec
+  - name: Google
+    url: https://google.com
+    about: Just search what others have to say regarding your problem.
