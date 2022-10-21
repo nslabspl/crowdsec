@@ -16,4 +16,4 @@ body:
     attributes:
       label: Why is this needed?
     validations:
-      required: true
+      required: false
