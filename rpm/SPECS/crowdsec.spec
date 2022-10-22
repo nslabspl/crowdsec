@@ -47,7 +47,6 @@ mkdir -p %{buildroot}/etc/crowdsec/hub
 mkdir -p %{buildroot}/etc/crowdsec/patterns
 mkdir -p %{buildroot}%{_sharedstatedir}/%{name}/data
 mkdir -p %{buildroot}%{_presetdir}
-
 mkdir -p %{buildroot}%{_sharedstatedir}/%{name}/plugins
 mkdir -p %{buildroot}%{_sysconfdir}/crowdsec/notifications/
 mkdir -p %{buildroot}%{_libdir}/%{name}/plugins/
@@ -62,12 +61,10 @@ install -m 644 -D config/simulation.yaml %{buildroot}%{_sysconfdir}/crowdsec
 install -m 644 -D config/profiles.yaml %{buildroot}%{_sysconfdir}/crowdsec
 install -m 644 -D config/console.yaml %{buildroot}%{_sysconfdir}/crowdsec
 install -m 644 -D %{SOURCE1} %{buildroot}%{_presetdir}
-
 install -m 551 plugins/notifications/slack/notification-slack %{buildroot}%{_libdir}/%{name}/plugins/
 install -m 551 plugins/notifications/http/notification-http %{buildroot}%{_libdir}/%{name}/plugins/
 install -m 551 plugins/notifications/splunk/notification-splunk %{buildroot}%{_libdir}/%{name}/plugins/
 install -m 551 plugins/notifications/email/notification-email %{buildroot}%{_libdir}/%{name}/plugins/
-
 install -m 600 plugins/notifications/slack/slack.yaml %{buildroot}%{_sysconfdir}/crowdsec/notifications/
 install -m 600 plugins/notifications/http/http.yaml %{buildroot}%{_sysconfdir}/crowdsec/notifications/
 install -m 600 plugins/notifications/splunk/splunk.yaml %{buildroot}%{_sysconfdir}/crowdsec/notifications/
@@ -124,7 +121,6 @@ rm -rf %{buildroot}
 %ghost %{_sysconfdir}/%{name}/hub/.index.json
 %ghost %{_localstatedir}/log/%{name}.log
 %dir /var/lib/%{name}/data/
-
 %ghost %{_sysconfdir}/crowdsec/local_api_credentials.yaml
 %ghost %{_sysconfdir}/crowdsec/online_api_credentials.yaml
 %ghost %{_sysconfdir}/crowdsec/acquis.yaml
