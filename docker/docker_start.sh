@@ -131,16 +131,13 @@ fi
 if [ "$DISABLE_POSTOVERFLOWS" != "" ]; then
     cscli -c "$CS_CONFIG_FILE" postoverflows remove $DISABLE_POSTOVERFLOWS
 fi
-if [ "$DISABLE_POSTOVERFLOWS" = "curge" ]; then
-    cscli -c "$CS_CONFIG_FILE" postoverflows curge $DISABLE_POSTOVERFLOWS
-fi
 
 function register_bouncer {
   if ! cscli -c "$CS_CONFIG_FILE" bouncers list -o json | jq -r .[].name | grep -q "${NAME}"; then
       if cscli -c "$CS_CONFIG_FILE" bouncers add "${NAME}" -k "${KEY}" > /dev/null; then
           echo "Registered bouncer for ${NAME}"
       else
-          echo "Failed to register bouncer for ${NAME}"
+          echo "Failed to register bouncer for ${NAME}. Name could already be taken"
       fi
   fi
 }
