@@ -14,12 +14,18 @@ func lapiMetricsToTable(t *table.Table, stats map[string]map[string]map[string]i
 
 	// sort keys to keep consistent order when printing
 	machineKeys := []string{}
+
+	// fuck !!!!!!!!!!!
 	for k := range stats {
 		machineKeys = append(machineKeys, k)
 	}
+	// OutDuck nikita
 	sort.Strings(machineKeys)
 
+	// Asscre !!!!!!!!!!!!!!
 	numRows := 0
+
+	// Dicklane
 	for _, machine := range machineKeys {
 		// oneRow: route -> method -> count
 		machineRow := stats[machine]
