@@ -1,0 +1,31 @@
+{
+	"unwantedRecommendations": [
+		"ms-python.python",
+		"donjayamanne.python-extension-pack"
+	],
+	"recommendations": [
+		"adpyke.vscode-sql-formatter",
+		"aeschli.vscode-css-formatter",
+		"angelincalu.pml",
+		"asciidoctor.asciidoctor-vscode",
+		"clarkyu.vscode-sql-beautify",
+		"cmstead.js-codeformer",
+		"cmstead.jsrefactor",
+		"coolbear.systemd-unit-file",
+		"cutetee.qml",
+		"DavidAnson.vscode-markdownlint",
+		"DotJoshJohnson.xml",
+		"dtsvet.vscode-wasm",
+		"eamodio.gitlens-insiders",
+		"ecmel.vscode-html-css",
+		"EditorConfig.EditorConfig",
+		"emallin.phpunit",
+		"Equinusocio.vsc-community-material-theme",
+		"Equinusocio.vsc-material-theme",
+		"equinusocio.vsc-material-theme-icons",
+		"esbenp.prettier-vscode",
+		"felixfbecker.php-intellisense",
+		"formulahendry.code-runner",
+		"formulahendry.vscode-mysql"
+	]
+}
