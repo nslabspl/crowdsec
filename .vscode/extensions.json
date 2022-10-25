@@ -1,7 +1,8 @@
 {
 	"unwantedRecommendations": [
 		"ms-python.python",
-		"donjayamanne.python-extension-pack"
+		"donjayamanne.python-extension-pack",
+		"ms-vscode.powershell-preview"
 	],
 	"recommendations": [
 		"adpyke.vscode-sql-formatter",
