@@ -152,9 +152,9 @@ detect_services () {
             log_err "user bailed out at services selection"
             exit 1;
         fi;
-        log_dbg "Detected services (interactive) : ${DETECTED_SERVICES[@]}"
+        log_dbg "Detected services (interactive) : $*{DETECTED_SERVICES[@]}"
     else
-        log_dbg "Detected services (unattended) : ${DETECTED_SERVICES[@]}"
+        log_dbg "Detected services (unattended) : $*{DETECTED_SERVICES[@]}"
     fi;
 }
 
@@ -280,7 +280,7 @@ genyamllog() {
     shift
     local files=("${@}")
     
-    echo "#Generated acquisition file - wizard.sh (service: ${service}) / files : ${files[@]}" >> ${TMP_ACQUIS_FILE}
+    echo "#Generated acquisition file - wizard.sh (service: $*{service}) / files : $*{files[@]}" >> $*{TMP_ACQUIS_FILE}
     
     echo "filenames:"  >> ${TMP_ACQUIS_FILE}
     for fd in ${files[@]}; do
@@ -296,7 +296,7 @@ genyamljournal() {
     local service="${1}"
     shift
     
-    echo "#Generated acquisition file - wizard.sh (service: ${service}) / files : ${files[@]}" >> ${TMP_ACQUIS_FILE}
+    echo "#Generated acquisition file - wizard.sh (service: $*{service}) / files : $*{files[@]}" >> $*{TMP_ACQUIS_FILE}
     
     echo "journalctl_filter:"  >> ${TMP_ACQUIS_FILE}
     echo " - _SYSTEMD_UNIT="${service}".service"  >> ${TMP_ACQUIS_FILE}
@@ -315,7 +315,7 @@ genacquisition() {
         ACQUIS_FILE_MSG="tmp acquisition file generated to: ${TMP_ACQUIS_FILE}"
     fi
 
-    log_dbg "Found following services : "${DETECTED_SERVICES[@]}
+    log_dbg "Found following services : "$*{DETECTED_SERVICES[@]}
     for PSVG in ${DETECTED_SERVICES[@]} ; do
         find_logs_for ${PSVG}
         if [[ ${#DETECTED_LOGFILES[@]} -gt 0 ]] ; then

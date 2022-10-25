@@ -1,5 +1,7 @@
 # CrowdSec
 
+[![CodeFactor](https://www.codefactor.io/repository/github/wojtekxtx/crowdsec/badge)](https://www.codefactor.io/repository/github/wojtekxtx/crowdsec)
+
 CrowdSec is a free, modern & collaborative behavior detection engine, coupled with a global IP reputation network. It stacks on fail2ban's philosophy but is IPV6 compatible and 60x faster (Go vs Python), uses Grok patterns to parse logs and YAML scenario to identify behaviors. CrowdSec is engineered for modern Cloud / Containers / VM based infrastructures (by decoupling detection and remediation). Once detected you can remedy threats with various bouncers (firewall block, nginx http 403, Captchas, etc.) while the aggressive IP can be sent to CrowdSec for curation before being shared among all users to further improve everyone's security.
 
 # Install
