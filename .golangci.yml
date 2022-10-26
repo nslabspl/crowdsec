@@ -19,7 +19,7 @@ linters-settings:
     # Sets the default severity.
     # See https://github.com/mgechev/revive#configuration
     # Default: warning
-    severity: warming
+    severity: warning
     # Enable all available rules.
     # Default: false
     enable-all-rules: false
