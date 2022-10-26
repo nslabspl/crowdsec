@@ -384,7 +384,7 @@ func (t *HubTestItem) InstallHub() error {
 		n := parser.Node{
 			Name:    "overrides",
 			Filter:  "1==1",
-			Statics: t.Config.OverrideStatics,
+			// Statics: t.Config.OverrideStatics,
 		}
 		b, err := yaml.Marshal(n)
 		if err != nil {

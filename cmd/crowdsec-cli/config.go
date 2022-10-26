@@ -18,7 +18,7 @@ import (
 	"github.com/wojtekxtx/crowdsec/pkg/types"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
-	"gopkg.in/yaml.v2"
+
 )
 
 type OldAPICfg struct {
