@@ -88,7 +88,6 @@ func (n *EmailPlugin) Notify(ctx context.Context, notification *protobufs.Notifi
 		return nil, fmt.Errorf("invalid plugin config name %s", notification.Name)
 	}
 	cfg := n.ConfigByName[notification.Name]
-
 	logger := baseLogger.Named(cfg.Name)
 
 	if cfg.LogLevel != nil && *cfg.LogLevel != "" {
@@ -96,7 +95,6 @@ func (n *EmailPlugin) Notify(ctx context.Context, notification *protobufs.Notifi
 	}
 
 	logger.Debug("got notification")
-
 	server := mail.NewSMTPClient()
 	server.Host = cfg.SMTPHost
 	server.Port = cfg.SMTPPort
