@@ -51,3 +51,6 @@ extensions
 
 # Old workflows
 .github/workflows/old
+
+# GolangLinter
+.golangci.yml
