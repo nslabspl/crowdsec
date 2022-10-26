@@ -25,5 +25,5 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 if ($pp['AgentOnly']) {
-  Write-Host "/AgentOnly was specified. LAPI is disabled, please register your agent manually and configure the service to start on boot."
+  Write-Verbose "/AgentOnly was specified. LAPI is disabled, please register your agent manually and configure the service to start on boot."
 }
