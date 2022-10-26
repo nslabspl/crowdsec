@@ -424,7 +424,7 @@ paths:
           in: query
           required: false
           type: boolean
-          description: 'only return alerts with decisions not expired yet'    
+          description: 'only return alerts with decisions not expired yet'
         - name: decision_type
           in: query
           required: false
@@ -434,7 +434,7 @@ paths:
           in: query
           required: false
           type: number
-          description: 'number of alerts to return' 
+          description: 'number of alerts to return'
         - name: origin
           in: query
           required: false
@@ -508,7 +508,7 @@ paths:
           in: query
           required: false
           type: boolean
-          description: 'only return alerts with decisions not expired yet'    
+          description: 'only return alerts with decisions not expired yet'
         - name: decision_type
           in: query
           required: false
@@ -518,7 +518,7 @@ paths:
           in: query
           required: false
           type: number
-          description: 'number of alerts to return' 
+          description: 'number of alerts to return'
         - name: origin
           in: query
           required: false
@@ -738,7 +738,7 @@ definitions:
         items:
           $ref: '#/definitions/Event'
       remediation:
-        type: boolean      
+        type: boolean
       decisions:
         type: array
         items:
