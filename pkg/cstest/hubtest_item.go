@@ -26,6 +26,7 @@ type HubTestItemConfig struct {
 	OverrideStatics []types.ExtraField `yaml:"override_statics"` //Allow to override statics. Executed before s00
 }
 
+// Nice
 type HubIndex struct {
 	Data map[string]map[string]cwhub.Item
 }
