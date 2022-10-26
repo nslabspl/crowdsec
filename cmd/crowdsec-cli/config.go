@@ -16,9 +16,6 @@ import (
 	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
 	"github.com/wojtekxtx/crowdsec/pkg/cwhub"
 	"github.com/wojtekxtx/crowdsec/pkg/types"
-	log "github.com/sirupsen/logrus"
-	"github.com/spf13/cobra"
-
 )
 
 type OldAPICfg struct {
