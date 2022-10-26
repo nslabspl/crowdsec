@@ -51,3 +51,6 @@ extensions
 
 # Old workflows
 .github/workflows/old
+
+# Do not ignore notes to developers
+!notes-to-devs.md
