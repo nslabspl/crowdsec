@@ -575,13 +575,11 @@ main() {
 
     if [ "$1" == "install" ] || [ "$1" == "configure" ] || [ "$1" == "detect" ]; then
         if [ "${SILENT}" == "false" ]; then
-            which whiptail > /dev/null
-            if [ $? -ne 0 ]; then
+            if which whiptail > /dev/null ; then
                 log_fatal "whiptail binary is needed to use the wizard in interactive mode, exiting ..."
             fi
         fi
-        which envsubst > /dev/null
-        if [ $? -ne 0 ]; then
+        if which envsubst > /dev/null ; then
             log_fatal "envsubst binary is needed to use do a full install with the wizard, exiting ..."
         fi
     fi
