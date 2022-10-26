@@ -28,5 +28,7 @@
 
 	"no-multiple-space-atx": false,
 	"no-duplicate-heading": false,
-	"no-duplicate-header": false
+	"no-duplicate-header": false,
+
+	"single-trailing-newline": false
 }
