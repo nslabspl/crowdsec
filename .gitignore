@@ -44,6 +44,7 @@ msi
 
 # Other
 pkg/acquisition/test_files/*.yaml
+# tests/cookies/
 
 # Stuff related to Azure
 azure*-*
