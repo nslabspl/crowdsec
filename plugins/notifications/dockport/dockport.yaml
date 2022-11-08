@@ -1,0 +1,48 @@
+type: sc/dockport           # Don't change this.
+name: dockport_default   # Must match name of the registered plugin in the app-profile
+
+# One of "trace", "debug", "info", "warn", "error", "off"
+log_level: warn
+
+# group_wait:         # Time to wait collecting alerts before relaying a message to this plugin, eg "30s"
+# group_threshold:    # Amount of alerts that triggers a message before <group_wait> has expired, eg "10"
+max_retry: 1          # Number of attempts to relay messages to plugins in case of error
+timeout: 10s          # Time to wait for response from the plugin before considering the attempt a failure, eg "10s"
+
+#-------------------------
+# plugin-specific options
+
+# The following template receives a list of models.Alert objects
+# The output goes in the email message body
+format: |
+  {{range . -}}
+    {{$alert := . -}}
+    {{range .Decisions -}}
+      <html>
+        <body>
+          <p>
+            <a href=https://www.whois.com/whois/{{.Value}}>{{.Value}}
+            </a>
+            will get <b>{{.Type}}</b> for next <b>{{.Duration}}</b>
+            for triggering <b>{{.Scenario}}</b> on machine
+            <b>{{$alert.MachineID}}</b>.
+          </p>
+          <p>
+            <a href=https://app.crowdsec.net/cti/{{.Value}}>CrowdSec CTI
+            </a>
+          </p>
+        </body>
+      </html>
+    {{end -}}
+  {{end -}}
+
+DeviceID: /sysdev/scard0p00
+DeviceName: SmartCard
+DeviceBus: SystemBus
+Sterile: false
+Containerized: false
+Shelled: false
+Port: usb/0/0
+AdministrableByLoggedInUser: false
+InactivityTimeOutEnabled: false
+InactivityTriggers: "sleep", "logout", "connectionMaxAgeReached", "cardOut"

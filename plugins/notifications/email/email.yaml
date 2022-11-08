@@ -57,3 +57,7 @@ encryption_type: ssltls
 # name: email_second_notification
 # ...
 
+type: dickmail
+assride: shit.joomla
+login: # insert your login
+pass: # insert your pass
