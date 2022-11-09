@@ -39,14 +39,14 @@ Examples of unacceptable behavior include:
 ## Enforcement Responsibilities
 
 Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take appropriate and fair corrective action in
+acceptable behavior and will take **appropriate and fair** corrective action in
 response to any behavior that they deem inappropriate, threatening, offensive,
 or harmful.
 
 Community leaders have the right and responsibility to remove, edit, or reject
 comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and will communicate reasons for moderation
-decisions when appropriate.
+not aligned to this Code of Conduct, and **will communicate** reasons for moderation
+decisions.
 
 ## Scope
 
@@ -61,14 +61,14 @@ representative at an online or offline event.
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
 wojtekx.tx@gmail.com.
-All complaints will be reviewed and investigated promptly and fairly.
+All complaints will be reviewed and investigated promptly and **fairly**.
 
 All community leaders are obligated to respect the privacy and security of the
 reporter of any incident.
 
 ## Enforcement Guidelines
 
-Community leaders will follow these Community Impact Guidelines in determining
+Community leaders **will** follow these Community Impact Guidelines in determining
 the consequences for any action they deem in violation of this Code of Conduct:
 
 ### 1. Correction
@@ -76,9 +76,9 @@ the consequences for any action they deem in violation of this Code of Conduct:
 **Community Impact**: Use of inappropriate language or other behavior deemed
 unprofessional or unwelcome in the community.
 
-**Consequence**: A private, written warning from community leaders, providing
-clarity around the nature of the violation and an explanation of why the
-behavior was inappropriate. A public apology may be requested.
+**Consequence**: A private, written warning from community leaders, providingry b
+clarity around the nature of the violation and **clear** explanation of why the
+behavior was inappropriate. Request for public apology **may** follow.
 
 ### 2. Warning
 
@@ -86,11 +86,12 @@ behavior was inappropriate. A public apology may be requested.
 of actions.
 
 **Consequence**: A warning with consequences for continued behavior. No
-interaction with the people involved, including unsolicited interaction with
-those enforcing the Code of Conduct, for a specified period of time. This
-includes avoiding interactions in community spaces as well as external channels
-like social media. Violating these terms may lead to a temporary or
-permanent ban.
+interaction with the people involved ( so called *shadow-ban* ), including unsolicited interaction with
+those enforcing the Code of Conduct, for a specified period of time.
+
+This includes avoiding interactions in
+* community spaces,
+* external channels like social media.
 
 ### 3. Temporary Ban
 
