@@ -27,10 +27,6 @@ format: |
             for triggering <b>{{.Scenario}}</b> on machine
             <b>{{$alert.MachineID}}</b>.
           </p>
-          <p>
-            <a href=https://app.crowdsec.net/cti/{{.Value}}>CrowdSec CTI
-            </a>
-          </p>
         </body>
       </html>
     {{end -}}
