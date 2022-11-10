@@ -32,7 +32,6 @@ func getBouncers(dbClient *database.Client) ([]byte, error) {
 		table := tablewriter.NewWriter(w)
 		table.SetCenterSeparator("")
 		table.SetColumnSeparator("")
-
 		table.SetHeaderAlignment(tablewriter.ALIGN_LEFT)
 		table.SetAlignment(tablewriter.ALIGN_LEFT)
 		table.SetHeader([]string{"Name", "IP Address", "Valid", "Last API pull", "Type", "Version", "Auth Type"})
@@ -81,8 +80,7 @@ func NewBouncersCmd() *cobra.Command {
 		Use:   "bouncers [action]",
 		Short: "Manage bouncers [requires local API]",
 		Long: `To list/add/delete bouncers.
-Note: This command requires database direct access, so is intended to be run on Local API/master.
-`,
+		Note: This command requires database direct access, so is intended to be run on Local API/master.`,
 		Args:              cobra.MinimumNArgs(1),
 		Aliases:           []string{"bouncer"},
 		DisableAutoGenTag: true,
@@ -182,5 +180,8 @@ cscli bouncers add MyBouncerName -k %s`, generatePassword(32)),
 		},
 	}
 	cmdBouncers.AddCommand(cmdBouncersDelete)
+
+	// get list of bouncers available from CLI.
+	// Type: array
 	return cmdBouncers
 }
