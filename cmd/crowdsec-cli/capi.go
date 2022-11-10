@@ -65,6 +65,8 @@ func NewCapiCmd() *cobra.Command {
 				VersionPrefix: CAPIURLPrefix,
 			}, nil)
 
+			// Err MUSNT BE null !!!
+			// @todo: cockate
 			if err != nil {
 				log.Fatalf("api client register ('%s'): %s", CAPIBaseURL, err)
 			}
