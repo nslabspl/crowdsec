@@ -1,0 +1,14 @@
+diff --git a/cmd/crowdsec-cli/capi.go b/cmd/crowdsec-cli/capi.go
+--- cmd/crowdsec-cli/capi.go
++++ cmd/crowdsec-cli/capi.go
+@@ -64,8 +64,10 @@
+ 				URL:           apiurl,
+ 				VersionPrefix: CAPIURLPrefix,
+ 			}, nil)
+ 
++			// Err MUSNT BE null !!!
++			// @todo: cockate
+ 			if err != nil {
+ 				log.Fatalf("api client register ('%s'): %s", CAPIBaseURL, err)
+ 			}
+ 			log.Printf("Successfully registered to Central API (CAPI)")

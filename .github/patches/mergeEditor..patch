@@ -1,0 +1,20 @@
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+--- .vscode/settings.json
++++ .vscode/settings.json
+@@ -47,6 +47,14 @@
+ 		"diffEditor.renderIndicators": true,
+ 		"diffEditor.renderMarginRevertIcon": true,
+ 		"diffEditor.renderSideBySide": true,
+ 		"diffEditor.wordWrap": "on"
+-	}
++	},
++	"merge-conflict.autoNavigateNextConflict.enabled": true,
++	"merge-conflict.codeLens.enabled": true,
++	"merge-conflict.decorators.enabled": true,
++	"merge-conflict.diffViewPosition": "Below",
++
++	// MergeEditor
++	"mergeEditor.diffAlgorithm": "smart",
++	"mergeEditor.showDeletionMarkers": true
+ }
+\ No newline at end of file
