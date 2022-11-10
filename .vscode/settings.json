@@ -35,5 +35,18 @@
 	"yaml.schemas": {
 		"https://json.schemastore.org/github-issue-config.json": "file:///Users/wlisik/crowdsec/.github/ISSUE_TEMPLATE/config.yml",
 		"https://json.schemastore.org/codecov.json": "file:///Users/wlisik/crowdsec/.github/workflows/codecov.yml"
+	},
+
+	// Diffs ( VCS )
+	"[diff]": {
+		"diffEditor.codeLens": true,
+		"diffEditor.diffAlgorithm": "smart",
+		"diffEditor.ignoreTrimWhitespace": true,
+		"diffEditor.maxComputationTime": 5000,
+		"diffEditor.maxFileSize": 50,
+		"diffEditor.renderIndicators": true,
+		"diffEditor.renderMarginRevertIcon": true,
+		"diffEditor.renderSideBySide": true,
+		"diffEditor.wordWrap": "on"
 	}
 }
