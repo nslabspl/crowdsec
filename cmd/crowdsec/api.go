@@ -57,7 +57,7 @@ func serveAPIServer(apiServer *apiserver.APIServer, apiReady chan bool) {
 		}()
 
 		pluginTomb.Go(func() error {
-			# Investigate
+			// Investigate
 			pluginBroker.Run(&pluginTomb)
 			return nil
 		})
