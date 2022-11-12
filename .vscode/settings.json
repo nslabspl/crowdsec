@@ -37,7 +37,7 @@
 	// Expanding mode
 	"workbench.tree.expandMode": "singleClick",
 
-	// Indenting (subdirs) size 
+	// Indenting (dir >> subdir) size 
 	"workbench.tree.indent": 8,
 
 	// Small dots as indent guides
