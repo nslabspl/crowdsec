@@ -32,7 +32,7 @@
 	"editor.formatOnPaste": true,
 
 	// MiniMap
-	"editor.minimap.autohide": false,
+	"editor.minimap.enabled": false,
 
 
 	// Workbench
