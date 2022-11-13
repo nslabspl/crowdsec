@@ -28,15 +28,11 @@ CROWDSEC_CONFIG_PATH="${CROWDSEC_PATH}"
 CROWDSEC_LOG_FILE="/var/log/crowdsec.log"
 LAPI_LOG_FILE="/var/log/crowdsec_api.log"
 CROWDSEC_PLUGIN_DIR="${CROWDSEC_USR_DIR}/plugins"
-
 CROWDSEC_BIN="./cmd/crowdsec/crowdsec"
 CSCLI_BIN="./cmd/crowdsec-cli/cscli"
-
 CLIENT_SECRETS="local_api_credentials.yaml"
 LAPI_SECRETS="online_api_credentials.yaml"
-
 CONSOLE_FILE="console.yaml"
-
 BIN_INSTALL_PATH="/usr/local/bin"
 CROWDSEC_BIN_INSTALLED="${BIN_INSTALL_PATH}/crowdsec"
 
@@ -48,17 +44,12 @@ fi
 
 ACQUIS_PATH="${CROWDSEC_CONFIG_PATH}"
 ACQUIS_TARGET="${ACQUIS_PATH}/acquis.yaml"
-
 SYSTEMD_PATH_FILE="/etc/systemd/system/crowdsec.service"
-
 PATTERNS_FOLDER="config/patterns"
 PATTERNS_PATH="${CROWDSEC_CONFIG_PATH}/patterns/"
-
 ACTION=""
-
 DEBUG_MODE="false"
 FORCE_MODE="false"
-
 SUPPORTED_SERVICES='apache2
 httpd
 nginx
@@ -73,12 +64,10 @@ HTTP_PLUGIN_BINARY="./plugins/notifications/http/notification-http"
 SLACK_PLUGIN_BINARY="./plugins/notifications/slack/notification-slack"
 SPLUNK_PLUGIN_BINARY="./plugins/notifications/splunk/notification-splunk"
 EMAIL_PLUGIN_BINARY="./plugins/notifications/email/notification-email"
-
 HTTP_PLUGIN_CONFIG="./plugins/notifications/http/http.yaml"
 SLACK_PLUGIN_CONFIG="./plugins/notifications/slack/slack.yaml"
 SPLUNK_PLUGIN_CONFIG="./plugins/notifications/splunk/splunk.yaml"
 EMAIL_PLUGIN_CONFIG="./plugins/notifications/email/email.yaml"
-
 BACKUP_DIR=$(mktemp -d)
 rm -rf -- "$BACKUP_DIR"
 
