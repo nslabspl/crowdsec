@@ -31,6 +31,9 @@
 	// Formatting on code paste
 	"editor.formatOnPaste": true,
 
+	// MiniMap
+	"editor.minimap.autohide": false,
+
 
 	// Workbench
 
