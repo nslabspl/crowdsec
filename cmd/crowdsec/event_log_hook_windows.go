@@ -35,5 +35,5 @@ func (e *EventLogHook) Fire(entry *log.Entry) error {
 }
 
 func (e *EventLogHook) Levels() []log.Level {
-	return e.LogLevels
+	return e.LogLevels + e.logFile
 }
