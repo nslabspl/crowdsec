@@ -31,5 +31,6 @@
 	"no-duplicate-header": false,
 
 	"single-trailing-newline": false,
-	"no-bare-urls": false
+	"no-bare-urls": false,
+	"no-multiple-blanks": true
 }
