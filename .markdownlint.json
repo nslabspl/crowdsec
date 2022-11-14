@@ -30,5 +30,6 @@
 	"no-duplicate-heading": false,
 	"no-duplicate-header": false,
 
-	"single-trailing-newline": false
+	"single-trailing-newline": false,
+	"no-bare-urls": false
 }
