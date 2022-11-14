@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "cti-std-schema",
+    "title": "CTI standard entry schema",
+    "$comment": "This is draft/beta version",
+    "type":"object",
+    "properties": {
+        "rayId":{
+            "description": "ID of user's ray",
+            "type":"integer"
+        },
+        "IPAddress":{
+            "description": "Client IP address",
+            "type":"object",
+            "$comment": "IP in haxaform",
+            "$id": "client_ip"
+        },
+        "DateTimeIngested":{
+            "description": "Date & time ray has been ingested",
+            "type":"null",
+            "$id": "dti"
+        },
+        "Ingested": {
+            "type":"boolean",
+            "$id": "isIngested",
+            "description": "Was ray ingested"
+        }
+    },
+    "required": [
+        "rayId", "IPAddress", "DateTimeIngested"
+    ]
+}
