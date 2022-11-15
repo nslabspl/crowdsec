@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "bouncer-schema",
+    "$comment": "Schema for bouncers",
+    "properties": {
+        "bouncer":{
+            "properties": {
+                "configName":{
+                    "type":"string",
+                    "minLength":5
+                },
+                "ID":{
+                    "type":"integer"
+                },
+                "ApiKey":{
+                    "properties": {
+                        "ApiKeyName":{
+                            "type":"string",
+                            "minLength":10
+                        },
+                        "ApiKey":{
+                            "type":"integer"
+                        },
+                        "Active":{
+                            "type":"boolean"
+                        },
+                        "Permissions":{
+                            "properties": {
+                                "Allow read":{
+                                    "type":"boolean"
+                                },
+                                "Allow write":{
+                                    "type":"boolean"
+                                },
+                                "Allow sudo mode":{
+                                    "type":"boolean"
+                                },
+                                "Allow traffic to transit":{
+                                    "type":"boolean"
+                                },
+                                "Allow embedding":{
+                                    "type":"boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
