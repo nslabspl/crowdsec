@@ -1,3 +1,4 @@
 {
-    "$schema": "../decisions-schema.json"
+    "$schema": "../decisions-schema.json",
+    "decision": {}
 }

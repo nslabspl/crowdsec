@@ -3,43 +3,56 @@
     "$id": "bouncer-schema",
     "$comment": "Schema for bouncers",
     "properties": {
-        "bouncer":{
+        "bouncer": {
             "properties": {
-                "configName":{
-                    "type":"string",
-                    "minLength":5
+                "Bouncer Name": {
+                    "type": "string",
+                    "minLength": 5
                 },
-                "ID":{
-                    "type":"integer"
-                },
-                "ApiKey":{
+                "ApiKey": {
                     "properties": {
-                        "ApiKeyName":{
-                            "type":"string",
-                            "minLength":10
+                        "Name": {
+                            "type": "string",
+                            "minLength": 10
                         },
-                        "ApiKey":{
-                            "type":"integer"
+                        "Value": {
+                            "$comment": "Digits only",
+                            "type": "integer"
                         },
-                        "Active":{
-                            "type":"boolean"
-                        },
-                        "Permissions":{
+                        "Hash": {
                             "properties": {
-                                "Allow read":{
-                                    "type":"boolean"
+                                "Value": {
+                                    "type": "number",
+                                    "$comment": "Numerical hash"
                                 },
-                                "Allow write":{
-                                    "type":"boolean"
+                                "Hash type": {
+                                    "enum": [
+                                        "SHA-1",
+                                        "SHA-256",
+                                        "ECMA",
+                                        "Propulus",
+                                        "inDigio",
+                                        "Rell",
+                                        "ANV-16",
+                                        "ANV-32",
+                                        "ANV-64",
+                                        "ePCT v.1",
+                                        "ePCT v.2",
+                                        "eMMV (Standard)",
+                                        "eMMV (FSF compliant)",
+                                        "RSA",
+                                        "PSA"
+                                    ]
+                                }
+                            }
+                        },
+                        "Permissions": {
+                            "properties": {
+                                "Allow data to transit": {
+                                    "type": "boolean"
                                 },
-                                "Allow sudo mode":{
-                                    "type":"boolean"
-                                },
-                                "Allow traffic to transit":{
-                                    "type":"boolean"
-                                },
-                                "Allow embedding":{
-                                    "type":"boolean"
+                                "Allow mixed type data (MTD)": {
+                                    "type": "boolean"
                                 }
                             }
                         }

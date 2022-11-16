@@ -1,10 +1,4 @@
 {
     "$schema": "../bouncer-schema.json",
-    "bouncer": {
-        "ApiKey": {
-            "Permissions": {
-                "Allow traffic to transit": false
-            }
-        }
-    }
+    "bouncer": {}
 }
