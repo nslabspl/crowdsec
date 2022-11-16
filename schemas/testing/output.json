@@ -1,8 +1,4 @@
 {
     "$schema": "../cti-std.json",
-    "ingestBody": {
-        "ingestMsg": "This is sample",
-        "ingestStamp": 155,
-        "HashingAlg":"ECMA"
-    }
+    "CTI": {}
 }

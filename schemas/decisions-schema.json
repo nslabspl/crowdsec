@@ -2,30 +2,34 @@
     "$schema": "http://json-schema.org/schema",
     "$id": "cs-decisions",
     "title": "Schema for decision taking process",
-    "type":"object",
     "properties": {
-        "Scenario":{
-            "type":"string",
-            "description": "Name of the scenario"
-        },
-        "Count":{
-            "type":"integer",
-            "description": "How many times scenario is being called/inityialized",
-            "minimum": 1
-        },
-        "Origin":{
-            "type":"string",
-            "description": "Where scenario originates from/what caused scenario to be invoked"
-        },
-        "type":{
-            "enum": [
-                "Internal", "Local", "Remote"
-            ]
-        },
-        "Scope":{
-            "enum": [
-                "IP", "Range", "Country", "As"
-            ]
+        "decision": {
+            "properties": {
+                "Scenario Name": {
+                    "type": "string",
+                    "description": "Name of the scenario"
+                },
+                "Count": {
+                    "type": "integer",
+                    "description": "How many times scenario is being called/inityialized",
+                    "minimum": 1
+                },
+                "Origin": {
+                    "enum": [
+                        "Internal",
+                        "Local",
+                        "Remote"
+                    ]
+                },
+                "Scope": {
+                    "enum": [
+                        "IP",
+                        "Range",
+                        "Country",
+                        "As"
+                    ]
+                }
+            }
         }
     }
 }

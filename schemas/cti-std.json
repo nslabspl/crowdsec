@@ -3,38 +3,56 @@
     "$id": "cti-std-schema",
     "title": "CTI standard entry schema",
     "$comment": "This is draft/beta version",
-    "type":"object",
     "properties": {
-        "ingestId":{
-            "description": "ID of specific ingest",
-            "type":"integer",
-            "minimum": 0,
-            "maximum": 255
-        },
-        "ingestBody":{
+        "CTI": {
             "properties": {
-                "Length":{
-                    "description": "Length of ingest",
-                    "type":"integer"
+                "ingestId": {
+                    "description": "ID of specific ingest",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255
                 },
-                "ingestStamp":{
-                    "description": "Ingest signature",
-                    "type":"number"
-                },
-                "ingestMsg":{
-                    "description": "Message (body) of ingest",
-                    "type":"string"
-                },
-                "HashingAlg":{
-                    "description": "Hashing algorith used in transiting ray",
-                    "enum": [
-                        "SHA-1", "SHA-256", "ECMA", "Propulus", "inDigio", "Rell",
-                        "ANV-16", "ANV-32", "ANV-64", "ePCT v.1", "ePCT v.2",
-                        "eMMV (Standard)", "eMMV (FSF compliant)", "RSA", "PSA"
+                "ingestBody": {
+                    "properties": {
+                        "Length": {
+                            "description": "Length of ingest",
+                            "type": "integer"
+                        },
+                        "ingestStamp": {
+                            "description": "Ingest signature",
+                            "type": "number"
+                        },
+                        "ingestMsg": {
+                            "description": "Message (body) of ingest",
+                            "type": "string"
+                        },
+                        "HashingAlg": {
+                            "description": "Hashing algorith used in transiting ray",
+                            "enum": [
+                                "SHA-1",
+                                "SHA-256",
+                                "ECMA",
+                                "Propulus",
+                                "inDigio",
+                                "Rell",
+                                "ANV-16",
+                                "ANV-32",
+                                "ANV-64",
+                                "ePCT v.1",
+                                "ePCT v.2",
+                                "eMMV (Standard)",
+                                "eMMV (FSF compliant)",
+                                "RSA",
+                                "PSA"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "ingestStamp",
+                        "ingestMsg"
                     ]
                 }
-            },
-            "required": ["ingestStamp", "ingestMsg"]
+            }
         }
-    }
+    } 
 }
