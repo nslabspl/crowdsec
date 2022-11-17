@@ -46,7 +46,7 @@
 	"workbench.tree.renderIndentGuides": "onHover",
 
 	// VSCode theme
-	"workbench.colorTheme": "Abyss",
+	"workbench.colorTheme": "GitHub Light",
 
 	// Close editor on file delete
 	"workbench.editor.closeOnFileDelete": true,
