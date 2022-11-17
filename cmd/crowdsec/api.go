@@ -1,9 +1,13 @@
+// Author: wojtekxtx
 package main
 
 import (
+
+	// Builtin packages
 	"runtime"
 	"time"
 
+	// From source/repo
 	"github.com/wojtekxtx/crowdsec/pkg/apiserver"
 	"github.com/wojtekxtx/crowdsec/pkg/csconfig"
 	"github.com/wojtekxtx/crowdsec/pkg/types"

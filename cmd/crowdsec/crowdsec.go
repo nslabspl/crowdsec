@@ -55,7 +55,7 @@ func runCrowdsec(cConfig *csconfig.Config, parsers *parser.Parsers) error {
 			parsersTomb.Go(func() error {
 				defer types.CatchPanic("crowdsec/runParse")
 				if err := runParse(inputLineChan, inputEventChan, *parsers.Ctx, parsers.Nodes); err != nil { //this error will never happen as parser.Parse is not able to return errors
-					log.Fatalf("starting parse error : %s", err)
+					log.Fatalf("Error starting parser: %s", err)
 					return err
 				}
 				return nil
@@ -73,7 +73,7 @@ func runCrowdsec(cConfig *csconfig.Config, parsers *parser.Parsers) error {
 		if cConfig.Crowdsec.BucketStateFile != "" {
 			log.Warningf("Restoring buckets state from %s", cConfig.Crowdsec.BucketStateFile)
 			if err := leaky.LoadBucketsState(cConfig.Crowdsec.BucketStateFile, buckets, holders); err != nil {
-				return fmt.Errorf("unable to restore buckets : %s", err)
+				return fmt.Errorf("Unable to restore buckets : %s", err)
 			}
 		}
 
@@ -81,7 +81,7 @@ func runCrowdsec(cConfig *csconfig.Config, parsers *parser.Parsers) error {
 			bucketsTomb.Go(func() error {
 				defer types.CatchPanic("crowdsec/runPour")
 				if err := runPour(inputEventChan, holders, buckets, cConfig); err != nil {
-					log.Fatalf("starting pour error : %s", err)
+					log.Fatalf("Starting error pouring: %s", err)
 					return err
 				}
 				return nil
@@ -99,7 +99,7 @@ func runCrowdsec(cConfig *csconfig.Config, parsers *parser.Parsers) error {
 			outputsTomb.Go(func() error {
 				defer types.CatchPanic("crowdsec/runOutput")
 				if err := runOutput(inputEventChan, outputEventChan, buckets, *parsers.Povfwctx, parsers.Povfwnodes, *cConfig.API.Client.Credentials); err != nil {
-					log.Fatalf("starting outputs error : %s", err)
+					log.Fatalf("starting outputing error message: %s", err)
 					return err
 				}
 				return nil
@@ -152,7 +152,7 @@ func serveCrowdsec(parsers *parser.Parsers, cConfig *csconfig.Config, agentReady
 		if err := ShutdownCrowdsecRoutines(); err != nil {
 			log.Fatalf("unable to shutdown crowdsec routines: %s", err)
 		}
-		log.Debugf("everything is dead, return crowdsecTomb")
+		log.Debugf("everything is down, return crowdsecTomb")
 		if dumpStates {
 			dumpParserState()
 			dumpOverflowState()

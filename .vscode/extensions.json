@@ -1,14 +1,15 @@
 {
+	// Extensions that are NOT wanted in dev-env.
 	"unwantedRecommendations": [
 		"ms-python.python",
 		"donjayamanne.python-extension-pack",
 		"ms-vscode.powershell-preview"
 	],
+
+	// Extensions that ARE wanted; not obligatory, but they can improve QoW greatly.
 	"recommendations": [
-		"adpyke.vscode-sql-formatter",
 		"aeschli.vscode-css-formatter",
 		"asciidoctor.asciidoctor-vscode",
-		"clarkyu.vscode-sql-beautify",
 		"cmstead.js-codeformer",
 		"cmstead.jsrefactor",
 		"coolbear.systemd-unit-file",

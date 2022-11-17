@@ -14,9 +14,9 @@
 	"editor.autoClosingQuotes": "always",
 
 	// Should find function automatically find user-input in search field
-	"editor.find.autoFindInSelection": "always",
+	"editor.find.autoFindInSelection": "never",
 
-	// Separate code(block) from search results with 1 space
+	// Separate code(block) from search results with 1 newline
 	"editor.find.addExtraSpaceOnTop": false,
 
 	// Cursor style
