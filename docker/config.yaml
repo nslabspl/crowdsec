@@ -46,9 +46,9 @@ api:
       - ::1
     online_client: # Central API credentials (to push signals and receive bad IPs)
       #credentials_path: /etc/crowdsec/online_api_credentials.yaml
-#    tls:
-#      cert_file: /etc/crowdsec/ssl/cert.pem
-#      key_file: /etc/crowdsec/ssl/key.pem
+    tls:
+      cert_file: /etc/crowdsec/ssl/cert.pem
+      key_file: /etc/crowdsec/ssl/key.pem
 prometheus:
   enabled: true
   level: full
