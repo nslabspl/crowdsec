@@ -9,20 +9,25 @@ fi
 # TLS defaults
 CERT_FILE="${CERT_FILE:-/etc/ssl/cert.pem}"
 KEY_FILE="${KEY_FILE:-/etc/ssl/key.pem}"
+MTC_FILE="/etc/ssl/mtc"
+CS_DB_STAGING_FILES = /staging/var/lib/crowdsec/data/*.mmdb
+CS_DATA_DIR = /var/lib/crowdsec/data/
 
 # Plugins directory default
-PLUGIN_DIR="${PLUGIN_DIR:-/usr/local/lib/crowdsec/plugins/}"
+PLUGIN_DIR="/usr/local/lib/crowdsec/plugins/"
 
 #Check & prestage databases
 if [ ! -e "/var/lib/crowdsec/data/GeoLite2-ASN.mmdb" ] && [ ! -e "/var/lib/crowdsec/data/GeoLite2-City.mmdb" ]; then
-    mkdir -p /var/lib/crowdsec/data
-    cp /staging/var/lib/crowdsec/data/*.mmdb /var/lib/crowdsec/data/
+    mkdir -p ${CS_DATA_DIR}
+    cp -r ${CS_DB_STAGING_FILES} ${CS_DATA_DIR}
+    rm -rf ${CS_DB_STAGING_FILES}
 fi
 
 #Check & prestage /etc/crowdsec
 if [ ! -e "/etc/crowdsec/local_api_credentials.yaml" ] && [ ! -e "/etc/crowdsec/config.yaml" ]; then
     mkdir -p /etc/crowdsec
     cp -r /staging/etc/* /etc/
+    rm -rf /etc/staging
 fi
 
 # regenerate local agent credentials (ignore if agent is disabled)
