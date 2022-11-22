@@ -1,0 +1,74 @@
+From b876cc7e501211b9bfef0da8c7da983deb61dcf0 Mon Sep 17 00:00:00 2001
+From: wojtekxtx <wojtekx.tx@gmail.com>
+Date: Sun, 20 Nov 2022 21:26:30 +0100
+Subject: [PATCH 1/2] variarize
+
+---
+ docker/docker_start.sh | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+diff --git a/docker/docker_start.sh b/docker/docker_start.sh
+index e91c733..9f6d271 100755
+--- a/docker/docker_start.sh
++++ b/docker/docker_start.sh
+@@ -9,20 +9,25 @@ fi
+ # TLS defaults
+ CERT_FILE="${CERT_FILE:-/etc/ssl/cert.pem}"
+ KEY_FILE="${KEY_FILE:-/etc/ssl/key.pem}"
++MTC_FILE="/etc/ssl/mtc"
++CS_DB_STAGING_FILES = /staging/var/lib/crowdsec/data/*.mmdb
++CS_DATA_DIR = /var/lib/crowdsec/data/
+ 
+ # Plugins directory default
+-PLUGIN_DIR="${PLUGIN_DIR:-/usr/local/lib/crowdsec/plugins/}"
++PLUGIN_DIR="/usr/local/lib/crowdsec/plugins/"
+ 
+ #Check & prestage databases
+ if [ ! -e "/var/lib/crowdsec/data/GeoLite2-ASN.mmdb" ] && [ ! -e "/var/lib/crowdsec/data/GeoLite2-City.mmdb" ]; then
+-    mkdir -p /var/lib/crowdsec/data
+-    cp /staging/var/lib/crowdsec/data/*.mmdb /var/lib/crowdsec/data/
++    mkdir -p ${CS_DATA_DIR}
++    cp -r ${CS_DB_STAGING_FILES} ${CS_DATA_DIR}
++    rm -rf ${CS_DB_STAGING_FILES}
+ fi
+ 
+ #Check & prestage /etc/crowdsec
+ if [ ! -e "/etc/crowdsec/local_api_credentials.yaml" ] && [ ! -e "/etc/crowdsec/config.yaml" ]; then
+     mkdir -p /etc/crowdsec
+     cp -r /staging/etc/* /etc/
++    rm -rf /etc/staging
+ fi
+ 
+ # regenerate local agent credentials (ignore if agent is disabled)
+-- 
+2.37.1 (Apple Git-137.1)
+
+
+From de975f486a477cc3dfd6b942c4c4c80c2a015885 Mon Sep 17 00:00:00 2001
+From: wojtekxtx <wojtekx.tx@gmail.com>
+Date: Sun, 20 Nov 2022 22:51:16 +0100
+Subject: [PATCH 2/2] uncomment TLS
+
+---
+ docker/config.yaml | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/docker/config.yaml b/docker/config.yaml
+index 848d481..122f6bf 100644
+--- a/docker/config.yaml
++++ b/docker/config.yaml
+@@ -46,9 +46,9 @@ api:
+       - ::1
+     online_client: # Central API credentials (to push signals and receive bad IPs)
+       #credentials_path: /etc/crowdsec/online_api_credentials.yaml
+-#    tls:
+-#      cert_file: /etc/crowdsec/ssl/cert.pem
+-#      key_file: /etc/crowdsec/ssl/key.pem
++    tls:
++      cert_file: /etc/crowdsec/ssl/cert.pem
++      key_file: /etc/crowdsec/ssl/key.pem
+ prometheus:
+   enabled: true
+   level: full
+-- 
+2.37.1 (Apple Git-137.1)
