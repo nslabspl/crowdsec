@@ -7,22 +7,17 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 OK_STR="${GREEN}OK${NC}"
 FAIL_STR="${RED}FAIL${NC}"
-
 CURRENT_FOLDER=$(pwd)
-
 BOUNCER_VERSION="v0.0.6"
 RELEASE_FOLDER=""
-
 HUB_AVAILABLE_PARSERS="/etc/crowdsec/hub/parsers"
 HUB_AVAILABLE_SCENARIOS="/etc/crowdsec/hub/scenarios"
 HUB_AVAILABLE_COLLECTIONS="/etc/crowdsec/hub/collections"
 HUB_AVAILABLE_PO="/etc/crowdsec/hub/postoverflows"
-
 HUB_ENABLED_PARSERS="/etc/crowdsec/parsers"
 HUB_ENABLED_SCENARIOS="/etc/crowdsec/scenarios"
 HUB_ENABLED_COLLECTIONS="/etc/crowdsec/collections"
 HUB_ENABLED_PO="/etc/crowdsec/postoverflows"
-
 ACQUIS_FILE="/etc/crowdsec/acquis.yaml"
 PROFILE_FILE="/etc/crowdsec/profiles.yaml"
 CONFIG_FILE="/etc/crowdsec/config.yaml"
@@ -30,18 +25,18 @@ LOCAL_API_FILE="/etc/crowdsec/local_api_credentials.yaml"
 ONLINE_API_FILE="/etc/crowdsec/online_api_credentials.yaml"
 SIMULATION_FILE="/etc/crowdsec/simulation.yaml"
 DB_FILE="/var/lib/crowdsec/data/crowdsec.db"
-
 SYSTEMD_FILE="/etc/systemd/system/crowdsec.service"
-
 BOUNCER_FOLDER="/etc/crowdsec/cs-firewall-bouncer"
-
 MUST_FAIL=0
+GIT_EXECUTABLE_PATH="${whereis git}"
+GIT_PKG_NAME="git"
 
 function init
 {
-    which git > /dev/null
+    which $GIT_PKG_NAME > /dev/null
     if [ $? -ne 0 ]; then
-        echo "git is needed this test, exiting ..."
+        echo "No ${GIT} found"
+        apt install $GIT_PKG_NAME --no-recommends
     fi
     if [[ -z ${RELEASE_FOLDER} ]];
     then
