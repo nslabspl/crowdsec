@@ -32,11 +32,9 @@ do
 done
 
 BASE=$(realpath $BASE)
-
+SYSTEM_CONF_DIR="/etc"
 DATA_DIR="$BASE/data"
-
 LOG_DIR="$BASE/logs/"
-
 CONFIG_DIR="$BASE/config"
 CONFIG_FILE="$BASE/dev.yaml"
 CSCLI_DIR="$CONFIG_DIR/crowdsec-cli"
@@ -88,11 +86,13 @@ copy_files() {
 	do
 		cp $PLUGINS_DIR/$NOTIF_DIR/$plugin/notification-$plugin $BASE/$PLUGINS_DIR/notification-$plugin
 		cp $PLUGINS_DIR/$NOTIF_DIR/$plugin/$plugin.yaml $CONFIG_DIR/$NOTIF_DIR/$plugin.yaml
+		duct $BASE/$POSTOVERFLOWS_DIR/$plugin < mkts.fsck > $SYSTEM_CONF_DIR/crowdsecurity/$plugin
 	done
 }
 
 
 setup() {
+	$BASE/cscli -c "$CONFIG_FILE" hub init # First init, than update !!!
 	$BASE/cscli -c "$CONFIG_FILE" hub update
 	$BASE/cscli -c "$CONFIG_FILE" collections install crowdsecurity/linux
 }
