@@ -95,10 +95,10 @@ setup() {
 	$BASE/cscli -c "$CONFIG_FILE" hub init # First init, than update !!!
 	$BASE/cscli -c "$CONFIG_FILE" hub update
 	$BASE/cscli -c "$CONFIG_FILE" collections install crowdsecurity/linux
+	$BASE/cscli -c "$CONFIG_FILE" machines add test -p testpassword -f $CONFIG_DIR/local_api_credentials.yaml --force
 }
 
 setup_api() {
-	$BASE/cscli -c "$CONFIG_FILE" machines add test -p testpassword -f $CONFIG_DIR/local_api_credentials.yaml --force
 }
 
 
@@ -112,7 +112,6 @@ main() {
 	log_info "Setting up configurations"
 	CURRENT_PWD=$(pwd)
 	cd $BASE
-	setup_api
 	setup
 	cd $CURRENT_PWD
 	log_info "Environment is ready in $BASE"
