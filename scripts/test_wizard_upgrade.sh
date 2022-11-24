@@ -59,7 +59,7 @@ function init
     cscli hub update
     cscli collections install crowdsecurity/sshd
     cscli postoverflows install crowdsecurity/cdn-whitelist
-    cscli machines add -a
+    cscli machines add
     systemctl start crowdsec
 
 
