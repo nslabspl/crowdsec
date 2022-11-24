@@ -61,6 +61,7 @@ function init
     cscli postoverflows install crowdsecurity/cdn-whitelist
     cscli machines add
     systemctl start crowdsec
+    systemctl enable crowdsec
 
 
     echo "[*] Install firewall bouncer"
