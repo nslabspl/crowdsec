@@ -9,3 +9,5 @@ let addCMDiv = new function addToPage(){
 	document.getElementById('cookieMessageDiv').style.height = auto;
 	document.getElementById('cookieMessageDiv').style.backgroundColor = lightblue;
 }
+
+addCMDiv(); // Fixes #38
