@@ -63,9 +63,9 @@ function init
     systemctl start crowdsec
     systemctl enable crowdsec
 
-
     echo "[*] Install firewall bouncer"
-    wget https://github.com/wojtekxtx/cs-firewall-bouncer/releases/download/${BOUNCER_VERSION}/cs-firewall-bouncer.tgz
+
+    wget https://github.com/crowdsecurity/cs-firewall-bouncer/releases/download/${BOUNCER_VERSION}/cs-firewall-bouncer.tgz
     tar xzvf cs-firewall-bouncer.tgz
     cd cs-firewall-bouncer-${BOUNCER_VERSION}/
     (echo "iptables" | sudo ./install.sh) || (echo "Unable to install cs-firewall-bouncer" && exit 1)
@@ -73,43 +73,30 @@ function init
 
     echo "[*] Tainting parser /etc/crowdsec/parsers/s01-parse/sshd-logs.yaml"
     echo "  # test taint parser" >> /etc/crowdsec/parsers/s01-parse/sshd-logs.yaml
-
     echo "[*] Tainting scenario /etc/crowdsec/scenarios/ssh-bf.yaml"
     echo "  # test taint scenario" >> /etc/crowdsec/scenarios/ssh-bf.yaml
-
     echo "[*] Tainting postoverflow /etc/crowdsec/postoverflows/s01-whitelist/cdn-whitelist.yaml"
     echo "  # test taint postoverflow" >> /etc/crowdsec/postoverflows/s01-whitelist/cdn-whitelist.yaml
-
     echo "[*] Tainting new systemd configuration file"
     echo "  # test taint systemd file" >> ${RELEASE_FOLDER}/config/crowdsec.service
-
     echo "[*] Tainting profile file"
     echo "  # test taint profile file" >> ${PROFILE_FILE}
-
     echo "[*] Tainting acquis file"
     echo "  # test taint acquis file" >> ${ACQUIS_FILE}
-
     echo "[*] Tainting local_api_creds file"
     echo "  # test taint local_api_creds file" >> ${LOCAL_API_FILE}
-
     echo "[*] Tainting online_api_creds file"
     echo "  # test taint online_api_creds file" >> ${ONLINE_API_FILE}
-
     echo "[*] Tainting config file"
     echo "  # test taint config file" >> ${CONFIG_FILE}
-
     echo "[*] Tainting simulation file"
     echo "  # test taint simulation file" >> ${SIMULATION_FILE}
-
     echo "[*] Adding a decision"
     cscli decisions add -i 1.2.3.4
-
-
     find ${HUB_ENABLED_PARSERS} -type l -exec md5sum "{}" + >> parsers_enabled.md5
     find ${HUB_ENABLED_SCENARIOS} -type l -exec md5sum "{}" + >> scenarios_enabled.md5
     find ${HUB_ENABLED_COLLECTIONS} -type l -exec md5sum "{}" + >> collections_enabled.md5
     find ${HUB_ENABLED_PO} -type l -exec md5sum "{}" + >> po_enabled.md5
-
     md5sum ${ACQUIS_FILE} >> acquis.md5
     md5sum ${PROFILE_FILE} >> profile.md5
     md5sum ${LOCAL_API_FILE} >> local_api_creds.md5
@@ -118,7 +105,6 @@ function init
     md5sum ${SIMULATION_FILE} >> simulation.md5
     md5sum ${DB_FILE} >> db.md5
     md5sum ${SYSTEMD_FILE} >> systemd.md5
-
     echo "[*] Setup done"
     echo "[*] Launching the upgrade"
     cd ${RELEASE_FOLDER}/
