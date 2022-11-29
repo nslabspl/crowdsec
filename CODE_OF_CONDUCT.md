@@ -17,44 +17,33 @@ diverse, inclusive, and healthy community.
 Examples of behavior that contributes to a positive environment for our
 community include:
 
-* Demonstrating empathy and kindness toward other people
-* Being respectful of differing opinions, viewpoints, and experiences
-* Giving and gracefully accepting constructive feedback
-* Accepting responsibility and apologizing to those affected by our mistakes,
-  and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the
+- Demonstrating empathy and kindness toward other people
+- Being respectful of differing opinions, viewpoints, and experiences
+- Giving and **gracefully accepting any kind of feedback**
+- **Accepting responsibility and apologizing to those affected by our mistakes,
+  and learning from the experience**
+- Focusing on what is best not just for us as individuals, but for the
   overall community
 
 Examples of unacceptable behavior include:
 
-* The use of sexualized language or imagery, and sexual attention or
+- The use of sexualized language or imagery, and sexual attention or
   advances of any kind
-* Trolling, insulting or derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or email
-  address, without their explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
+- Trolling, insulting or derogatory comments, and personal or political attacks
+- Public or private [harassment](https://en.wikipedia.org/wiki/Harassment)
+- Publishing others' private information, such as a physical address, without their explicit permission
+- Other conduct which could **reasonably** be considered inappropriate in a
   professional setting
-
-## Enforcement Responsibilities
-
-Community leaders are responsible for clarifying and enforcing our standards of
-acceptable behavior and will take **appropriate and fair** corrective action in
-response to any behavior that they deem inappropriate, threatening, offensive,
-or harmful.
-
-Community leaders have the right and responsibility to remove, edit, or reject
-comments, commits, code, wiki edits, issues, and other contributions that are
-not aligned to this Code of Conduct, and **will communicate** reasons for moderation
-decisions.
 
 ## Scope
 
-This Code of Conduct applies within all community spaces, and also applies when
-an individual is officially representing the community in public spaces.
-Examples of representing our community include using an official e-mail address,
-posting via an official social media account, or acting as an appointed
-representative at an online or offline event.
+This Code of Conduct applies to *all community members* ( team **included!** ) within
+**all community spaces**, and also applies when an individual is officially
+representing the community in public spaces.
+Examples of representing our community include, but are not limited to:
+* using an official e-mail address,
+* posting via an official social media account,
+* acting as an appointed representative at an online or offline event.
 
 ## Enforcement
 
@@ -63,13 +52,18 @@ reported to the community leaders responsible for enforcement at
 wojtekx.tx@gmail.com.
 All complaints will be reviewed and investigated promptly and **fairly**.
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
-
-## Enforcement Guidelines
-
-Community leaders **will** follow these Community Impact Guidelines in determining
-the consequences for any action they deem in violation of this Code of Conduct:
+Community leaders:
+* Are responsible for clarifying and enforcing our standards of acceptable
+  behavior and will take **appropriate and fair** corrective action in
+  response to any behavior that they deem inappropriate, threatening, offensive,
+  or harmful.
+* Have the right and responsibility to remove, edit, or reject comments, commits,
+  code, wiki edits, issues, and other contributions that are not aligned with this
+  Code of Conduct, and **will communicate** reasons for moderation decisions.
+  **These reasons are not upto discussion.**
+* Are **obligated** to respect the privacy and security of the reporter of any incident.
+* **Will** follow these Community Impact Guidelines in determining the consequences
+  for any action this document deems in violation of this Code of Conduct:
 
 ### 1. Correction
 
@@ -86,12 +80,13 @@ behavior was inappropriate. Request for public apology **may** follow.
 of actions.
 
 **Consequence**: A warning with consequences for continued behavior. No
-interaction with the people involved ( so called *shadow-ban* ), including unsolicited interaction with
+interaction with the people involved ( so called _shadow-ban_ ), including unsolicited interaction with
 those enforcing the Code of Conduct, for a specified period of time.
 
 This includes avoiding interactions in
-* community spaces,
-* external channels like social media.
+
+- community spaces,
+- external channels like social media.
 
 ### 3. Temporary Ban
 
@@ -107,7 +102,7 @@ Violating these terms may lead to a permanent ban.
 ### 4. Permanent Ban
 
 **Community Impact**: Demonstrating a pattern of violation of community
-standards, including sustained inappropriate behavior,  harassment of an
+standards, including sustained inappropriate behavior, harassment of an
 individual, or aggression toward or disparagement of classes of individuals.
 
 **Consequence**: A permanent ban from any sort of public interaction within

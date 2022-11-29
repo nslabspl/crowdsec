@@ -36,5 +36,8 @@
     "lines_below": 0
   },
   "MD025": false,
-  "no-hard-tabs": false
+  "no-hard-tabs": false,
+  "MD004": {
+    "style": "asterisk"
+  }
 }
