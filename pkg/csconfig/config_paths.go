@@ -3,7 +3,6 @@ package csconfig
 import (
 	"fmt"
 	"path/filepath"
-
 	"github.com/pkg/errors"
 )
 
@@ -15,6 +14,8 @@ type ConfigurationPaths struct {
 	HubDir             string `yaml:"hub_dir,omitempty"`
 	PluginDir          string `yaml:"plugin_dir,omitempty"`
 	NotificationDir    string `yaml:"notification_dir,omitempty"`
+	// ----
+	
 }
 
 func (c *Config) LoadConfigurationPaths() error {
